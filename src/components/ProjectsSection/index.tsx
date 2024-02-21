@@ -5,11 +5,10 @@ import nlwNotes from "@public/nlwNotes.png";
 import nlwFood from "@public/nlwFood.webp";
 import quiz from "@public/quiz.png";
 import todo from "@public/todo.png";
-//tirar o padding bottom
 export function ProjectsSection() {
   return (
-    <section className="container pb-20">
-      <div className="mb-5 flex items-center justify-center gap-5 border-b-4 border-zinc-700 py-5">
+    <section id="projects" className="container py-5">
+      <div className="mb-5 flex items-center justify-center gap-5 border-b-4 border-zinc-700 pb-5">
         <div className="h-1 w-40 rounded-md bg-zinc-700" />
         <h2 className="text-4xl font-bold text-zinc-300">Projects</h2>
         <div className="h-1 w-40 rounded-md bg-zinc-700" />

@@ -2,6 +2,7 @@ import Image from "next/image";
 import me from "@public/me.jpeg";
 import { SOCIAL_ICONS } from "@/constants/icons";
 import { Button } from "../ui/button";
+import { FileTextIcon, GithubIcon } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -60,8 +61,15 @@ export function HeroSection() {
         <div className="h-1 w-10 rounded-md bg-zinc-700" />
       </div>
 
-      <div className="container mt-auto flex pb-2 pt-5 md:justify-center">
-        <Button>Portfolio repository</Button>
+      <div className="container mt-auto flex gap-5 pb-2 pt-5 md:justify-center">
+        <Button className="gap-2">
+          <GithubIcon size={16} />
+          Portfolio repository
+        </Button>
+        <Button className="gap-2">
+          <FileTextIcon size={16} />
+          Download resume
+        </Button>
       </div>
     </section>
   );
