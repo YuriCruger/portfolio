@@ -5,16 +5,13 @@ import nlwNotes from "@public/nlwNotes.png";
 import nlwFood from "@public/nlwFood.webp";
 import quiz from "@public/quiz.png";
 import todo from "@public/todo.png";
+import { SectionTitle } from "../SectionTitle";
 export function ProjectsSection() {
   return (
     <section id="projects" className="container py-5">
-      <div className="mb-5 flex items-center justify-center gap-5 border-b-4 border-zinc-700 pb-5">
-        <div className="h-1 w-40 rounded-md bg-zinc-700" />
-        <h2 className="text-4xl font-bold text-zinc-300">Projects</h2>
-        <div className="h-1 w-40 rounded-md bg-zinc-700" />
-      </div>
+      <SectionTitle title="Projects" />
 
-      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
         <Card
           title="Market Admin"
           description="This is a web inventory management project in React and Next.js. It features email or Google login authentication, inventory functionalities, graphical insights, Firebase integration, and state management via Redux."
