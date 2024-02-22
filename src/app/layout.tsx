@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { Toaster } from "@/components/ui/toaster";
 
 const poppins = Poppins({
   subsets: ["latin", "latin-ext"],
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Header />
         {children}
         <ScrollToTop />
+        <Toaster />
         <Footer />
       </body>
     </html>
