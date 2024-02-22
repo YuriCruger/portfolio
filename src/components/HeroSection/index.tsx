@@ -1,12 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import me from "@public/me.jpeg";
 import { SOCIAL_ICONS } from "@/constants/icons";
 import { Button } from "../ui/button";
 import { FileTextIcon, GithubIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function HeroSection() {
+  const handleDownload = () => {
+    const downloadLink = document.createElement("a");
+    downloadLink.href = "yuri-cruger-web-developer.pdf";
+    downloadLink.download = "yuri-cruger-web-developer.pdf";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  };
+
   return (
-    <section className="md:h-screen-80 flex flex-col">
+    <section className="flex flex-col md:h-screen-80">
       <div className="pointer-events-none absolute top-0">
         <Image
           src="https://images.unsplash.com/photo-1596865249308-2472dc5807d7?q=80&w=2106&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -55,18 +67,20 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="container  hidden gap-5 md:flex">
-        <div className="h-1 w-10 rounded-md bg-zinc-700" />
-        <div className="h-1 w-full rounded-md bg-zinc-700" />
-        <div className="h-1 w-10 rounded-md bg-zinc-700" />
+      <div className="container hidden justify-center gap-5 md:flex">
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: "100%", transition: { duration: 0.5 } }}
+          className="h-1 w-full rounded-md bg-zinc-700"
+        />
       </div>
 
-      <div className="container mt-auto flex gap-5 pb-2 pt-5 md:justify-center">
+      <div className="container mt-auto flex flex-col gap-5 pb-2 pt-5 sm:flex-row md:justify-center">
         <Button className="gap-2">
           <GithubIcon size={16} />
           Portfolio repository
         </Button>
-        <Button className="gap-2">
+        <Button onClick={handleDownload} className="gap-2">
           <FileTextIcon size={16} />
           Download resume
         </Button>

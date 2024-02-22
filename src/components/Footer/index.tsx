@@ -6,7 +6,10 @@ import { Button } from "../ui/button";
 export function Footer() {
   return (
     <footer className="container flex flex-col justify-center gap-5 py-5">
-      <form id="contact" className="mx-auto flex w-[500px] flex-col gap-5">
+      <form
+        id="contact"
+        className="mx-auto flex w-full flex-col gap-5 sm:w-[500px]"
+      >
         <h2 className="text-center text-4xl font-bold text-zinc-300">
           Contact me
         </h2>
