@@ -7,10 +7,10 @@ import {
   FolderOpenIcon,
 } from "lucide-react";
 
+import { GiAchievement } from "react-icons/gi";
+
 export const NAV_ICONS = {
-  home: <HomeIcon />,
-  projects: <FolderOpenIcon />,
-  skills: <UserRoundCogIcon />,
+  projects: <UserRoundCogIcon size={22} />,
 };
 
 export const SOCIAL_ICONS = [

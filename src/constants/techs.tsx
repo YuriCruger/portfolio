@@ -41,7 +41,7 @@ export const TECHS = [
     time: "5 months",
   },
   {
-    title: "TailwindCss",
+    title: "TailwindCSS",
     icon: <TbBrandTailwind />,
     time: "6 months",
   },
