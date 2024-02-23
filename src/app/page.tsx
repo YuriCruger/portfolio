@@ -1,13 +1,13 @@
+import { AboutMe } from "@/components/AboutMe";
+import { Projects } from "@/components/Achievements";
 import { HeroSection } from "@/components/HeroSection";
-import { ProjectsSection } from "@/components/ProjectsSection";
-import { SkillsSection } from "@/components/SkillsSection";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <ProjectsSection />
-      <SkillsSection />
+      <AboutMe />
+      <Projects />
     </>
   );
 }

@@ -32,7 +32,6 @@ export function Header() {
     >
       <nav className="flex items-center gap-4 sm:gap-10">
         <NavItem title="Projects" scrollToSection={scrollToSection} />
-        <NavItem title="Skills" scrollToSection={scrollToSection} />
       </nav>
 
       <div className="ml-auto flex items-center gap-4 sm:gap-10">

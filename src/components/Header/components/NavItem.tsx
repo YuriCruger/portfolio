@@ -8,6 +8,8 @@ interface NavItemProps {
 export function NavItem({ title, scrollToSection }: NavItemProps) {
   const lowercaseTitle = title.toLocaleLowerCase();
 
+  const upperCaseTitle = title.toLocaleUpperCase();
+
   return (
     <a
       onClick={() => scrollToSection(lowercaseTitle)}
@@ -16,7 +18,7 @@ export function NavItem({ title, scrollToSection }: NavItemProps) {
       <div className="max-sm:hidden">
         {NAV_ICONS[lowercaseTitle as keyof typeof NAV_ICONS]}
       </div>
-      {title}
+      {upperCaseTitle}
     </a>
   );
 }
