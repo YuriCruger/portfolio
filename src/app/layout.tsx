@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={`bg-zinc-100 dark:bg-zinc-900 ${poppins.className}`}>
         <Header />
         {children}
         <ScrollToTop />

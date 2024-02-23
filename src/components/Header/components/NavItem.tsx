@@ -11,9 +11,11 @@ export function NavItem({ title, scrollToSection }: NavItemProps) {
   return (
     <a
       onClick={() => scrollToSection(lowercaseTitle)}
-      className="flex cursor-pointer items-center gap-2 text-zinc-300 transition-all hover:text-zinc-400"
+      className="flex cursor-pointer items-center gap-2 transition-all hover:text-zinc-700 dark:hover:text-zinc-400"
     >
-      {NAV_ICONS[lowercaseTitle as keyof typeof NAV_ICONS]}
+      <div className="max-sm:hidden">
+        {NAV_ICONS[lowercaseTitle as keyof typeof NAV_ICONS]}
+      </div>
       {title}
     </a>
   );

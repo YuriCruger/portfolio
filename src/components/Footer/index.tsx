@@ -8,6 +8,7 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "../ui/use-toast";
+import { IconContainer } from "./components/IconContainer";
 
 const contactSchema = z.object({
   name: z.string().min(1),
@@ -85,21 +86,21 @@ export function Footer() {
         id="contact"
         className="mx-auto flex w-full flex-col gap-5 sm:w-[500px]"
       >
-        <h2 className="text-center text-4xl font-bold text-zinc-300">
+        <h2 className="text-center text-4xl font-bold text-zinc-950 dark:text-zinc-300">
           Contact me
         </h2>
 
         <div className="relative">
-          <div className="absolute left-3 top-[50%] translate-y-[-50%] text-zinc-500">
+          <IconContainer>
             <UserIcon />
-          </div>
+          </IconContainer>
           <Input placeholder="Name" {...register("name")} />
         </div>
 
         <div className="relative">
-          <div className="absolute left-3 top-[50%] translate-y-[-50%] text-zinc-500">
+          <IconContainer>
             <MailIcon size={20} />
-          </div>
+          </IconContainer>
           <Input placeholder="Email" {...register("email")} />
         </div>
         {errors.email && (
@@ -107,9 +108,9 @@ export function Footer() {
         )}
 
         <div className="relative">
-          <div className="absolute left-3 top-2.5  text-zinc-500">
+          <IconContainer className="top-2.5 translate-y-0">
             <MessageSquareTextIcon size={20} />
-          </div>
+          </IconContainer>
           <Textarea placeholder="Message" {...register("message")} />
         </div>
 
@@ -118,9 +119,11 @@ export function Footer() {
         </Button>
       </form>
 
-      <p className="text-center text-sm text-zinc-400">
+      <p className="text-center text-sm text-zinc-900 dark:text-zinc-400">
         Code by{" "}
-        <span className="text-lg font-bold text-zinc-300">Yuri Cruger</span>
+        <span className="text-lg font-bold text-zinc-950 dark:text-zinc-300">
+          Yuri Cruger
+        </span>
       </p>
     </footer>
   );

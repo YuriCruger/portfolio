@@ -2,6 +2,9 @@
 import { NavItem } from "./components/NavItem";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
+import { Switch } from "../ui/switch";
+import { MoonIcon, SunIcon } from "lucide-react";
+import { useState } from "react";
 
 export function Header() {
   const scrollToSection = (section: string) => {
@@ -13,6 +16,10 @@ export function Header() {
 
   const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
+  function toggleTheme() {
+    document.documentElement.classList.toggle("dark");
+  }
+
   return (
     <motion.header
       initial="hidden"
@@ -21,15 +28,19 @@ export function Header() {
         hidden: { opacity: 0, y: -20 },
         visible,
       }}
-      className="container mx-auto flex items-center py-5"
+      className="container mx-auto flex items-center py-5 font-semibold text-zinc-900 dark:text-zinc-300"
     >
       <nav className="flex items-center gap-4 sm:gap-10">
-        <NavItem title="Home" scrollToSection={scrollToSection} />
         <NavItem title="Projects" scrollToSection={scrollToSection} />
         <NavItem title="Skills" scrollToSection={scrollToSection} />
       </nav>
 
-      <div className="ml-auto">
+      <div className="ml-auto flex items-center gap-4 sm:gap-10">
+        <div className="flex items-center gap-2 ">
+          <SunIcon className="max-sm:hidden" />
+          <Switch onCheckedChange={toggleTheme} />
+          <MoonIcon className="max-sm:hidden" />
+        </div>
         <Button onClick={() => scrollToSection("contact")}>Contact</Button>
       </div>
     </motion.header>

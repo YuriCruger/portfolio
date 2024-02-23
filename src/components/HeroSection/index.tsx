@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import me from "@public/me.jpeg";
+import me from "@public/me.png";
 import { SOCIAL_ICONS } from "@/constants/icons";
 import { Button } from "../ui/button";
 import { FileTextIcon, GithubIcon } from "lucide-react";
@@ -26,17 +26,17 @@ export function HeroSection() {
           height={0}
           sizes="100vw"
           alt="background"
-          className="h-screen w-screen object-cover opacity-5"
+          className="h-screen w-screen object-cover opacity-10 dark:opacity-5"
         />
       </div>
 
       <div className="container flex flex-col-reverse items-center md:flex-row">
         <div className="flex flex-col justify-center gap-5 md:w-1/2">
-          <p className="text-zinc-400">Hello! I am</p>
-          <h1 className="text-7xl font-bold text-zinc-100 lg:text-9xl">
+          <p className="text-zinc-900 dark:text-zinc-400">Hello! I am</p>
+          <h1 className="text-7xl font-bold text-zinc-950 dark:text-zinc-100 lg:text-9xl">
             Yuri Cruger
           </h1>
-          <p className="text-sm text-zinc-400 md:text-base">
+          <p className="text-sm text-zinc-900 dark:text-zinc-400 md:text-base">
             a determined web developer, ready to embrace new professional
             opportunities. I am open to job offers, eager to apply my skills,
             and contribute to innovative projects. Let's explore possibilities
@@ -48,7 +48,7 @@ export function HeroSection() {
               <a
                 key={social.url}
                 href={social.url}
-                className="text-zinc-300 transition-all hover:text-zinc-400"
+                className="text-zinc-800 transition-all hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-zinc-400"
                 target="_blank"
               >
                 {social.icon}
@@ -63,15 +63,15 @@ export function HeroSection() {
           width={0}
           height={0}
           sizes="100vw"
-          className="h-[380px] object-contain sm:h-[500px] md:h-[600px] md:w-1/2"
+          className="z-50 h-[380px] object-contain sm:h-[450px] md:h-[650px] md:w-[400px] lg:w-1/2"
         />
       </div>
 
-      <div className="container hidden justify-center gap-5 md:flex">
+      <div className="container mt-20 hidden justify-center gap-5 md:flex">
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: "100%", transition: { duration: 0.5 } }}
-          className="h-1 w-full rounded-md bg-zinc-700"
+          className="h-1 w-full rounded-md bg-zinc-950 dark:bg-zinc-100"
         />
       </div>
 
