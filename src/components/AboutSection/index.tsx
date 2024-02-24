@@ -6,20 +6,23 @@ import { TextRevealCard } from "../ui/text-reveal-card";
 import { TECHS } from "@/constants/techs";
 import { CardSkill } from "../Achievements/components/cardSkill";
 
-export function AboutMe() {
+export function AboutSection() {
   return (
-    <section className="flex h-screen bg-slate-300 py-10">
+    <section
+      id="about"
+      className="flex min-h-screen bg-slate-300 py-10 dark:bg-slate-900"
+    >
       <div className="container flex flex-col">
         <SectionTitle title="About" />
 
         <TextRevealCard
           text="Yuri Cruger"
           revealText="For me, it was just 'I love what I do, so I want to do as much of it as possible.' - Kobe Bryant"
-        ></TextRevealCard>
+        />
 
         <div className="mt-5 flex items-center gap-10">
           <div className=" w-1/2 ">
-            <p className="tracking-widest text-zinc-700">
+            <p className="tracking-widest text-zinc-700 dark:text-zinc-300">
               I embarked on my journey into the programming world a year ago as
               a self-taught enthusiast. Throughout this period, I committed
               myself to various study projects that enabled me to enhance my
@@ -49,7 +52,7 @@ export function AboutMe() {
               width={0}
               sizes="100vw"
               alt="Yuri Cruger"
-              className="h-[400px] w-full object-contain"
+              className="h-[380px] w-full object-contain"
             />
           </div>
         </div>

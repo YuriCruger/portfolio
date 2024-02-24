@@ -31,7 +31,8 @@ export function Header() {
       className="container mx-auto flex items-center py-5 font-semibold text-zinc-900 dark:text-zinc-300"
     >
       <nav className="flex items-center gap-4 sm:gap-10">
-        <NavItem title="Projects" scrollToSection={scrollToSection} />
+        <NavItem title="about" scrollToSection={scrollToSection} />
+        <NavItem title="projects" scrollToSection={scrollToSection} />
       </nav>
 
       <div className="ml-auto flex items-center gap-4 sm:gap-10">
