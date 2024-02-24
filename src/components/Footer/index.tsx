@@ -90,7 +90,7 @@ export function Footer() {
           <span className="text-xl font-bold text-zinc-800 dark:text-zinc-300">
             Thank you for visiting my portfolio.
           </span>
-          <p className="text-sm text-zinc-700 dark:text-zinc-400">
+          <p className="text-sm tracking-wider text-zinc-700 dark:text-zinc-400">
             If you have any questions, suggestions, or opportunities, please
             fill out the form below. I look forward to hearing from you!
           </p>

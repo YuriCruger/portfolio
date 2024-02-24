@@ -22,7 +22,7 @@ export function HeroSection() {
       <BackgroundTextureOverlay />
 
       <div className="container flex flex-1 flex-col items-center justify-center gap-5">
-        <SectionTitle title="portfolio" />
+        <SectionTitle title="portfolio" className="pb-0" />
 
         <TextGenerateEffect
           words="Yuri Cruger"

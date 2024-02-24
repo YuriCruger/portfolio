@@ -4,7 +4,7 @@ import me from "@public/me.png";
 import { ProfileInfo } from "../ProfileInfo";
 import { TextRevealCard } from "../ui/text-reveal-card";
 import { TECHS } from "@/constants/techs";
-import { CardSkill } from "../Achievements/components/cardSkill";
+import { CardSkill } from "./components/cardSkill";
 import { ImageContain } from "../ui/moving-border";
 
 export function AboutSection() {

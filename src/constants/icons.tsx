@@ -1,13 +1,10 @@
 import {
-  UserRoundCogIcon,
   GithubIcon,
   InstagramIcon,
   LinkedinIcon,
   FolderOpenIcon,
   UserIcon,
 } from "lucide-react";
-
-import { GiAchievement } from "react-icons/gi";
 
 export const NAV_ICONS = {
   about: <UserIcon />,
