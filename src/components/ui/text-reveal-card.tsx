@@ -74,13 +74,13 @@ export const TextRevealCard = ({
                 }
           }
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="absolute z-20 bg-slate-300  text-center will-change-transform"
+          className="absolute z-20 bg-slate-300 text-center will-change-transform dark:bg-slate-900"
         >
           <p
             style={{
               textShadow: "4px 4px 15px ",
             }}
-            className="bg-gradient-to-b from-white to-neutral-300 bg-clip-text py-10 text-base font-bold leading-10 text-white text-zinc-800/50 sm:text-[3rem]"
+            className="bg-gradient-to-b from-white to-neutral-300 bg-clip-text py-10 text-base font-bold leading-10 text-zinc-800/50 dark:text-zinc-300 sm:text-[3rem]"
           >
             {revealText}
           </p>
@@ -96,7 +96,7 @@ export const TextRevealCard = ({
         ></motion.div>
 
         <div className="mx-auto overflow-hidden ">
-          <p className="bg-[#323238] bg-clip-text py-10 text-base font-bold text-transparent sm:text-[3rem] ">
+          <p className="bg-[#323238] bg-clip-text py-10 text-base font-bold text-transparent dark:text-zinc-300/70 sm:text-[3rem] ">
             {text}
           </p>
           <MemoizedStars />

@@ -9,7 +9,7 @@ interface CardProps {
 
 export function Card({ title, description, image }: CardProps) {
   return (
-    <div className="group h-[220px] overflow-hidden rounded-md bg-gray-500/30 shadow-md shadow-zinc-900 transition-all hover:scale-95 dark:bg-zinc-800 dark:shadow-zinc-700 lg:h-[280px] xl:h-[450px]">
+    <div className="group h-[250px] overflow-hidden rounded-md bg-gray-500/30 shadow-md shadow-zinc-900 transition-all hover:scale-95 dark:bg-zinc-800 dark:shadow-zinc-700 lg:h-[320px] xl:h-[350px]">
       <div className="h-full w-full group-hover:hidden">
         <Image
           src={image}
