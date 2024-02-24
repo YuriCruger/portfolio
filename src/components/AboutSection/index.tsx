@@ -5,6 +5,7 @@ import { ProfileInfo } from "../ProfileInfo";
 import { TextRevealCard } from "../ui/text-reveal-card";
 import { TECHS } from "@/constants/techs";
 import { CardSkill } from "../Achievements/components/cardSkill";
+import { ImageContain } from "../ui/moving-border";
 
 export function AboutSection() {
   return (
@@ -45,15 +46,20 @@ export function AboutSection() {
             </div>
           </div>
 
-          <div className="w-1/2">
-            <Image
-              src={me}
-              height={0}
-              width={0}
-              sizes="100vw"
-              alt="Yuri Cruger"
-              className="h-[380px] w-full object-contain"
-            />
+          <div className="flex w-1/2 justify-center">
+            <ImageContain
+              borderRadius="0.375rem"
+              className="border-none bg-transparent shadow-md shadow-zinc-300 dark:border-slate-800"
+            >
+              <Image
+                src={me}
+                height={0}
+                width={0}
+                sizes="100vw"
+                alt="Yuri Cruger"
+                className="h-[380px] w-full object-contain"
+              />
+            </ImageContain>
           </div>
         </div>
 
