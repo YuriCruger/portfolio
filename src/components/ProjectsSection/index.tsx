@@ -1,7 +1,7 @@
 import {
   PROJECTS_CARDS_FIRST,
   PROJECTS_CARDS_SECOND,
-} from "@/constants/projectsCards";
+} from "@/constants/projects";
 import { SectionTitle } from "../SectionTitle";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 

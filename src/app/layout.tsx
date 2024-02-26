@@ -22,12 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-zinc-100 dark:bg-zinc-900 ${poppins.className}`}>
-        <Header />
-        {children}
-        <ScrollToTop />
-        <Toaster />
-        <Footer />
+      <body className={poppins.className}>
+        <div className="flex min-h-screen flex-col">
+          <Header />
+          <ScrollToTop />
+          <Toaster />
+          <div className="flex-1">{children}</div>
+          <Footer />
+        </div>
       </body>
     </html>
   );

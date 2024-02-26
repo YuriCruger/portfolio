@@ -1,7 +1,12 @@
 "use client";
 
+import {
+  ProjectFirstCardProps,
+  ProjectSecondCardProps,
+} from "@/constants/projects";
 import { cn } from "@/utils/cn";
 import React, { ReactNode, useEffect, useState } from "react";
+import { ProjectCard } from "../ProjectCard";
 
 export const InfiniteMovingCards = ({
   items,
@@ -10,12 +15,7 @@ export const InfiniteMovingCards = ({
   pauseOnHover = true,
   className,
 }: {
-  items: {
-    quote?: string;
-    name?: string;
-    title?: string;
-    card: ReactNode;
-  }[];
+  items: ProjectFirstCardProps[] | ProjectSecondCardProps[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
@@ -86,12 +86,12 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]",
         )}
       >
-        {items.map((item) => (
+        {items.map((project) => (
           <li
             className="relative w-[300px] flex-shrink-0 rounded-md bg-zinc-600/30 px-2 py-1.5 shadow-md shadow-zinc-600 dark:bg-zinc-700 sm:w-[400px] lg:w-[600px] xl:w-[650px] "
-            key={item.name}
+            key={project.title}
           >
-            {item.card}
+            <ProjectCard project={project} />
           </li>
         ))}
       </ul>
