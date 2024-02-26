@@ -8,28 +8,38 @@ import todo from "@public/todo.png";
 
 export const PROJECTS_CARDS_FIRST = [
   {
+    name: "market_admin",
     card: (
       <Card
         title="Market Admin"
-        description="This web project, developed in React and Next.js with TypeScript, provides an effective solution for inventory management. Highlights include secure authentication via Google, an interactive inventory page with features such as addition, deletion, filtering, and export to Excel. The dashboard presents visual insights into inventory by category, using dynamic charts from the Recharts library. Integration with Firebase ensures a reliable experience, while Redux manages the application state for smooth and efficient navigation."
+        description="This web project, developed in React and Next.js with TypeScript, provides an effective solution for inventory management.
+           Highlights include secure authentication via Google, an interactive inventory page with features such as addition, deletion, filtering, and export to Excel.
+           The dashboard presents visual insights into inventory by category, using dynamic charts from the Recharts library.
+           Integration with Firebase ensures a reliable experience, while Redux manages the application state for smooth and efficient navigation."
         image={market}
       />
     ),
   },
   {
+    name: "dine_restaurant",
     card: (
       <Card
         title="Dine Restaurant"
-        description="Developed in React, Dine is a Frontendmentor challenge featuring forms with Hook Form and Zod for efficient validation, and styled using Styled Components."
+        description="I present Dine, my front-end project inspired by Frontendmentor.
+          Developed with React, I used Hook Form and Zod to enhance form validation efficiently.
+          Styling is done with Styled Components, providing an elegant and flexible design."
         image={dine}
       />
     ),
   },
   {
+    name: "nlw_notes",
     card: (
       <Card
         title="NLW Notes"
-        description="Developed during the Rocketseat NLW Expert event, this project enables creating voice notes using the SpeechRecognition API. With technologies such as TypeScript, React, and Tailwind, users can manage notes through text or voice."
+        description="
+         Developed during the Rocketseat NLW Expert event, this project allows creating voice notes using the SpeechRecognition API.
+         With technologies such as TypeScript, React, and Tailwind, users can add, edit, and remove notes, both through text and voice."
         image={nlwNotes}
       />
     ),
@@ -38,6 +48,7 @@ export const PROJECTS_CARDS_FIRST = [
 
 export const PROJECTS_CARDS_SECOND = [
   {
+    name: "nlw_food",
     card: (
       <Card
         title="NLW Food Delivery"
@@ -47,19 +58,27 @@ export const PROJECTS_CARDS_SECOND = [
     ),
   },
   {
+    name: "quiz_app",
     card: (
       <Card
         title="Quiz App"
-        description="The Quiz App is an interactive app developed for a Frontend Mentor challenge, with adaptable design and dynamic questions via an API."
+        description="The Quiz App is an interactive question and answer application, created as part of a challenge proposed by Frontend Mentor.
+           It offers users the option to choose between light and dark modes.
+           This project was developed using React, Axios, React Query, TailwindCSS, and TypeScript.
+           The quiz content is fully powered by an API, ensuring the update and diversity of the questions."
         image={quiz}
       />
     ),
   },
   {
+    name: "todo",
     card: (
       <Card
         title="Todo"
-        description="The Todo is my first React project, created in response to a Frontend Mentor challenge. This responsive to-do list app provides both light and dark modes, offering users a personalized experience."
+        description="
+         The Todo is my first React project, developed in response to a challenge from Frontend Mentor.
+         This responsive task list application offers light and dark modes.
+         Through this project, I was able to explore and apply fundamental React concepts, marking the beginning of my journey in web application development."
         image={todo}
       />
     ),
