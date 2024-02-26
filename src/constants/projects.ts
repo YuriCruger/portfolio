@@ -1,12 +1,32 @@
 export const PROJECTS_CARDS_FIRST = [
   {
+    id: "1",
     slug: "market-admin",
     title: "Market Admin",
     description:
       "This web project, developed in React and Next.js with TypeScript, provides an effective solution for inventory management. Highlights include secure authentication via Google, an interactive inventory page with features such as addition, deletion, filtering, and export to Excel. The dashboard presents visual insights into inventory by category, using dynamic charts from the Recharts library. Integration with Firebase ensures a reliable experience, while Redux manages the application state for smooth and efficient navigation.",
     image: "/market.png",
+    cards: [
+      {
+        id: "1",
+        title: "dashboard",
+        description: "olamundo",
+        image: "/market.png",
+        className: "md:col-span-2",
+        content: "olá mundo",
+      },
+      {
+        id: "1",
+        title: "table",
+        description: "olamundo",
+        image: "/market_table.png",
+        className: "md:col-span-2",
+        content: "olá mundo",
+      },
+    ],
   },
   {
+    id: "2",
     slug: "dine-restaurant",
     title: "Dine Restaurant",
     description:
@@ -14,6 +34,7 @@ export const PROJECTS_CARDS_FIRST = [
     image: "/dine.png",
   },
   {
+    id: "3",
     slug: "nlw-notes",
     title: "NLW Notes",
     description:
@@ -24,6 +45,7 @@ export const PROJECTS_CARDS_FIRST = [
 
 export const PROJECTS_CARDS_SECOND = [
   {
+    id: "4",
     slug: "nlw-food",
     title: "NLW Food Delivery",
     description:
@@ -31,6 +53,7 @@ export const PROJECTS_CARDS_SECOND = [
     image: "/nlwFood.webp",
   },
   {
+    id: "5",
     slug: "quiz-app",
     title: "Quiz App",
     description:
@@ -38,6 +61,7 @@ export const PROJECTS_CARDS_SECOND = [
     image: "/quiz.png",
   },
   {
+    id: "6",
     slug: "todo",
     title: "Todo",
     description:
