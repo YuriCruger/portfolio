@@ -4,9 +4,12 @@ import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 import { Switch } from "../ui/switch";
 import { MoonIcon, SunIcon } from "lucide-react";
-import { useState } from "react";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export function Header() {
+  const t = useTranslations("Index");
+
   const scrollToSection = (section: string) => {
     const sectionSelected = document.querySelector(`#${section}`);
     if (sectionSelected) {
@@ -33,6 +36,7 @@ export function Header() {
       <nav className="flex items-center gap-4 sm:gap-10">
         <NavItem title="about" scrollToSection={scrollToSection} />
         <NavItem title="projects" scrollToSection={scrollToSection} />
+        <p>{t("title")}</p>
       </nav>
 
       <div className="ml-auto flex items-center gap-4 sm:gap-10">
@@ -42,6 +46,12 @@ export function Header() {
           <MoonIcon className="max-sm:hidden" />
         </div>
         <Button onClick={() => scrollToSection("contact")}>Contact</Button>
+        <Link href="/en">
+          <Button>En</Button>
+        </Link>
+        <Link href="/pt-BR">
+          <Button>pt-BR</Button>
+        </Link>
       </div>
     </motion.header>
   );
