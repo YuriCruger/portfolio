@@ -30,7 +30,7 @@ export function HeroSection() {
         />
 
         <p className="font-mono uppercase text-zinc-800 dark:text-zinc-300 lg:text-lg">
-          | web developer |
+          | front-end developer |
         </p>
 
         <div className="flex items-center gap-5">

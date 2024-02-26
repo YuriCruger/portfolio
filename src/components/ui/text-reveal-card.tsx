@@ -96,7 +96,7 @@ export const TextRevealCard = ({
         ></motion.div>
 
         <div className="mx-auto overflow-hidden ">
-          <p className="bg-[#323238] bg-clip-text py-10 text-base font-bold text-transparent dark:text-zinc-300/70 sm:text-[3rem] ">
+          <p className="bg-[#323238] bg-clip-text py-10  text-[3rem] font-bold text-transparent dark:text-zinc-300/70 ">
             {text}
           </p>
           <MemoizedStars />

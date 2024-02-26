@@ -21,18 +21,18 @@ export function AboutSection() {
           revealText="For me, it was just 'I love what I do, so I want to do as much of it as possible.' - Kobe Bryant"
         />
 
-        <div className="mt-5 flex items-center gap-10">
-          <div className=" w-1/2 ">
+        <div className="flex flex-col-reverse items-center gap-10 pb-5 md:flex-row">
+          <div className="md:w-1/2">
             <p className="tracking-widest text-zinc-700 dark:text-zinc-300">
-              I embarked on my journey into the programming world a year ago as
-              a self-taught enthusiast. Throughout this period, I committed
-              myself to various study projects that enabled me to enhance my
-              skills and understanding of fundamental concepts. Now, I feel
-              ready to embrace professional opportunities that allow me to apply
-              and expand my knowledge. My primary area of focus is web and
-              mobile development, with a specialization in React and React
-              Native. I am eager to contribute my passion for programming and my
-              ability to learn quickly to the success of future projects.
+              I embarked on my journey into the programming world in 2023 as a
+              self-taught enthusiast. Throughout this period, I dedicated myself
+              to various study projects that allowed me to enhance my skills and
+              understanding of fundamental concepts. Now, I feel prepared to
+              embrace professional opportunities that enable me to apply and
+              expand my knowledge. My primary focus is on web and mobile
+              development, with a specialization in React and React Native. I am
+              eager to contribute my passion for programming and my ability to
+              learn quickly to the success of future projects.
             </p>
             <div className="mt-5">
               <ProfileInfo title="Name" description="Yuri Cruger" />
@@ -40,16 +40,16 @@ export function AboutSection() {
 
               <ProfileInfo
                 title="Position"
-                description="Freelancer, Web Developer"
+                description="Freelancer, Front-end Developer"
               />
               <ProfileInfo title="email" description="aoddrewiid@gmail.com" />
             </div>
           </div>
 
-          <div className="flex w-1/2 justify-center">
+          <div className="flex justify-center md:w-1/2">
             <ImageContain
               borderRadius="0.375rem"
-              className="border-none bg-transparent shadow-md shadow-zinc-300 dark:border-slate-800"
+              className="cursor-auto border-none bg-transparent shadow-md shadow-zinc-300 dark:border-slate-800"
             >
               <Image
                 src={me}

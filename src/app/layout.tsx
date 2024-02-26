@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en">
       <body className={`bg-zinc-100 dark:bg-zinc-900 ${poppins.className}`}>
         <Header />
         {children}
