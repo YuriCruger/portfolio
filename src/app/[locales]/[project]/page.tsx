@@ -11,6 +11,7 @@ export default function page() {
 
   return (
     <div className="h-screen-80 w-full py-20 ">
+      Olá mundo
       <LayoutGrid cards={cards} />
     </div>
   );

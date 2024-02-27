@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Toaster } from "@/components/ui/toaster";
 import { NextIntlClientProvider, useMessages } from "next-intl";
+import { useLocale } from "next-intl";
 
 const poppins = Poppins({
   subsets: ["latin", "latin-ext"],
@@ -15,17 +16,13 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Yuri Cruger",
 };
-
 export default function RootLayout({
   children,
-  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
-  params: {
-    locale: string;
-  };
 }>) {
   const messages = useMessages();
+  const locale = useLocale();
   return (
     <html lang={locale}>
       <body className={poppins.className}>

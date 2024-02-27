@@ -1,7 +1,7 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { Button } from "../ui/button";
-import Link from "next/link";
 import { ProjectFirstCardProps } from "@/constants/projects";
+import { Link } from "@/navigation";
 
 interface ProjectProps {
   project: ProjectFirstCardProps;
