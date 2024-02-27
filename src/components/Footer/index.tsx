@@ -11,6 +11,7 @@ import { useToast } from "../ui/use-toast";
 import { IconContainer } from "./components/IconContainer";
 import { SectionTitle } from "../SectionTitle";
 import { BackgroundTextureOverlay } from "../BackgroundTextureOverlay";
+import { useTranslations } from "next-intl";
 
 const contactSchema = z.object({
   name: z.string().min(1),
@@ -23,6 +24,7 @@ type contactProps = z.infer<typeof contactSchema>;
 const webhookURL = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL!;
 
 export function Footer() {
+  const t = useTranslations("footer");
   const { toast } = useToast();
   const {
     register,
@@ -84,15 +86,14 @@ export function Footer() {
   return (
     <footer className="relative flex flex-col justify-center gap-5 bg-zinc-200 py-5 dark:bg-zinc-950">
       <BackgroundTextureOverlay />
-      <SectionTitle title="Contact" />
+      <SectionTitle title={t("title")} />
       <div className="mx-auto sm:w-[500px]">
         <div className="mb-5 space-y-5 text-center">
           <span className="text-xl font-bold text-zinc-800 dark:text-zinc-300">
-            Thank you for visiting my portfolio.
+            {t("subtitle")}
           </span>
           <p className="text-sm tracking-wider text-zinc-700 dark:text-zinc-400">
-            If you have any questions, suggestions, or opportunities, please
-            fill out the form below. I look forward to hearing from you!
+            {t("message")}
           </p>
         </div>
         <form
@@ -125,13 +126,13 @@ export function Footer() {
           </div>
 
           <Button disabled={isSubmitting} type="submit">
-            Send
+            {t("button")}
           </Button>
         </form>
       </div>
 
       <p className="text-center text-sm text-zinc-900 dark:text-zinc-400">
-        Code by{" "}
+        {t("codeBy")}{" "}
         <span className="text-lg font-bold text-zinc-950 dark:text-zinc-300">
           Yuri Cruger
         </span>

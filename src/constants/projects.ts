@@ -125,6 +125,7 @@ export const PROJECTS_CARDS_SECOND = [
       "This project was created during the Rocketseat NLW event and developed in React Native, utilizing technologies like Zustand and Tailwind. It is a food delivery application, allowing users to choose orders, access the shopping cart, and send the order via WhatsApp message.",
     image: "/nlwFood.webp",
     repository: "https://github.com/YuriCruger/nlw-food-delivery",
+    web: "",
     cards: [
       {
         id: "1",

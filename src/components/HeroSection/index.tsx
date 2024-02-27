@@ -6,8 +6,11 @@ import { FileTextIcon, GithubIcon } from "lucide-react";
 import { SectionTitle } from "../SectionTitle";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 import { BackgroundTextureOverlay } from "../BackgroundTextureOverlay";
+import { useTranslations } from "next-intl";
 
 export function HeroSection() {
+  const t = useTranslations("hero_section");
+
   const handleDownload = () => {
     const downloadLink = document.createElement("a");
     downloadLink.href = "yuri-cruger-web-developer.pdf";
@@ -22,7 +25,7 @@ export function HeroSection() {
       <BackgroundTextureOverlay />
 
       <div className="container flex flex-1 flex-col items-center justify-center gap-5">
-        <SectionTitle title="portfolio" className="pb-0" />
+        <SectionTitle title={t("title")} className="pb-0" />
 
         <TextGenerateEffect
           words="Yuri Cruger"
@@ -30,7 +33,7 @@ export function HeroSection() {
         />
 
         <p className="font-mono uppercase text-zinc-800 dark:text-zinc-300 lg:text-lg">
-          | front-end developer |
+          | {t("position")} |
         </p>
 
         <div className="flex items-center gap-5">
@@ -50,11 +53,11 @@ export function HeroSection() {
       <div className="container mt-auto flex flex-col justify-center gap-5 pb-2 pt-5 sm:flex-row">
         <Button className="gap-1">
           <GithubIcon size={20} />
-          Portfolio repository
+          {t("repository")}
         </Button>
         <Button onClick={handleDownload} className="gap-1">
           <FileTextIcon size={20} />
-          Download resume
+          {t("resume")}
         </Button>
       </div>
     </section>

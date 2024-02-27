@@ -1,8 +1,46 @@
 {
-  "Index": {
-    "title": "Olá mundo"
+  "header": {
+    "navItems": {
+      "about": "Sobre",
+      "projects": "Projetos"
+    },
+    "button": "Contato"
   },
-  "NotFoundPage": {
-    "title": "Página não encontrada"
+
+  "hero_section": {
+    "title": "portfólio",
+    "position": "desenvolvedor front-end",
+    "repository": "Repositório do Portfólio",
+    "resume": "Baixar currículo"
+  },
+
+  "about_section": {
+    "title": {
+      "about": "sobre",
+      "skills": "habilidades"
+    },
+    "revealText": "Para mim, era apenas 'Eu amo o que faço, então quero fazer o máximo possível.' - Kobe Bryant",
+    "description": "Embarquei na minha jornada no mundo da programação em 2023 como um entusiasta autodidata. Ao longo desse período, dediquei-me a diversos projetos de estudo que me permitiram aprimorar minhas habilidades e compreensão de conceitos fundamentais. Agora, sinto-me preparado para abraçar oportunidades profissionais que me permitam aplicar e expandir meu conhecimento. Meu foco principal está no desenvolvimento web e mobile, com especialização em React e React Native. Estou ansioso para contribuir com minha paixão pela programação e minha capacidade de aprendizado rápido para o sucesso de projetos futuros.",
+    "infoTitle": {
+      "name": "nome",
+      "birth": "nascimento",
+      "position": "cargo"
+    },
+    "infoDescription": {
+      "birth": "3 de novembro de 2000",
+      "position": "Freelancer, Desenvolvedor Front-end"
+    }
+  },
+
+  "projects_section": {
+    "title": "projects"
+  },
+
+  "footer": {
+    "title": "contato",
+    "subtitle": "Obrigado por visitar meu portfólio.",
+    "message": "Se você tiver alguma dúvida, sugestão ou oportunidade, por favor, preencha o formulário abaixo. Estou ansioso para ouvir de você!",
+    "button": "Enviar",
+    "codeBy": "desenvolvido por"
   }
 }

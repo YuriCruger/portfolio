@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 export function Header() {
-  const t = useTranslations("Index");
+  const t = useTranslations("header");
 
   const scrollToSection = (section: string) => {
     const sectionSelected = document.querySelector(`#${section}`);
@@ -34,9 +34,14 @@ export function Header() {
       className="container mx-auto flex items-center py-5 font-semibold text-zinc-900 dark:text-zinc-300"
     >
       <nav className="flex items-center gap-4 sm:gap-10">
-        <NavItem title="about" scrollToSection={scrollToSection} />
-        <NavItem title="projects" scrollToSection={scrollToSection} />
-        <p>{t("title")}</p>
+        <NavItem
+          title={t("navItems.about")}
+          scrollToSection={scrollToSection}
+        />
+        <NavItem
+          title={t("navItems.projects")}
+          scrollToSection={scrollToSection}
+        />
       </nav>
 
       <div className="ml-auto flex items-center gap-4 sm:gap-10">
@@ -45,7 +50,9 @@ export function Header() {
           <Switch onCheckedChange={toggleTheme} />
           <MoonIcon className="max-sm:hidden" />
         </div>
-        <Button onClick={() => scrollToSection("contact")}>Contact</Button>
+        <Button onClick={() => scrollToSection("contact")}>
+          {t("button")}
+        </Button>
         <Link href="/en">
           <Button>En</Button>
         </Link>
