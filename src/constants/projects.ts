@@ -6,6 +6,8 @@ export const PROJECTS_CARDS_FIRST = [
     description:
       "This web project, developed in React and Next.js with TypeScript, provides an effective solution for inventory management. Highlights include secure authentication via Google, an interactive inventory page with features such as addition, deletion, filtering, and export to Excel. The dashboard presents visual insights into inventory by category, using dynamic charts from the Recharts library. Integration with Firebase ensures a reliable experience, while Redux manages the application state for smooth and efficient navigation.",
     image: "/market.png",
+    repository: "https://github.com/YuriCruger/Market-adm",
+    web: "https://market-adm.vercel.app/",
     cards: [
       {
         id: "1",
@@ -48,6 +50,8 @@ export const PROJECTS_CARDS_FIRST = [
     description:
       "I present Dine, my front-end project inspired by Frontendmentor. Developed with React, I used Hook Form and Zod to enhance form validation efficiently. Styling is done with Styled Components, providing an elegant and flexible design.",
     image: "/dine.png",
+    repository: "https://github.com/YuriCruger/Restaurant",
+    web: "https://restaurant-web-vercel.vercel.app/",
     cards: [
       {
         id: "1",
@@ -82,6 +86,8 @@ export const PROJECTS_CARDS_FIRST = [
     description:
       "Developed during the Rocketseat NLW Expert event, this project allows creating voice notes using the SpeechRecognition API. With technologies such as TypeScript, React, and Tailwind, users can add, edit, and remove notes, both through text and voice.",
     image: "/nlwNotes.png",
+    repository: "https://github.com/YuriCruger/nlw-notes",
+    web: "https://nlw-notes-eight.vercel.app/",
     cards: [
       {
         id: "1",
@@ -118,6 +124,7 @@ export const PROJECTS_CARDS_SECOND = [
     description:
       "This project was created during the Rocketseat NLW event and developed in React Native, utilizing technologies like Zustand and Tailwind. It is a food delivery application, allowing users to choose orders, access the shopping cart, and send the order via WhatsApp message.",
     image: "/nlwFood.webp",
+    repository: "https://github.com/YuriCruger/nlw-food-delivery",
     cards: [
       {
         id: "1",
@@ -159,6 +166,8 @@ export const PROJECTS_CARDS_SECOND = [
     description:
       "The Quiz App is an interactive question and answer application, created as part of a challenge proposed by Frontend Mentor. It offers users the option to choose between light and dark modes. This project was developed using React, Axios, React Query, TailwindCSS, and TypeScript. The quiz content is fully powered by an API, ensuring the update and diversity of the questions.",
     image: "/quiz.png",
+    repository: "https://github.com/YuriCruger/quiz-app-main",
+    web: "https://quiz-web-gilt.vercel.app/",
     cards: [
       {
         id: "1",
@@ -200,6 +209,8 @@ export const PROJECTS_CARDS_SECOND = [
     description:
       "The Todo is my first React project, developed in response to a challenge from Frontend Mentor. This responsive task list application offers light and dark modes. Through this project, I was able to explore and apply fundamental React concepts, marking the beginning of my journey in web application development.",
     image: "/todo.png",
+    repository: "https://github.com/YuriCruger/todo-app",
+    web: "https://todo-app-web-nine.vercel.app/",
     cards: [
       {
         id: "1",

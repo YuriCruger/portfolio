@@ -25,7 +25,7 @@ export default function RootLayout({
   const locale = useLocale();
   return (
     <html lang={locale}>
-      <body className={poppins.className}>
+      <body className={`${poppins.className} bg-zinc-100 dark:bg-zinc-900`}>
         <NextIntlClientProvider messages={messages}>
           <div className="flex min-h-screen flex-col">
             <Header />

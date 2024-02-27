@@ -48,12 +48,12 @@ export function HeroSection() {
       </div>
 
       <div className="container mt-auto flex flex-col justify-center gap-5 pb-2 pt-5 sm:flex-row">
-        <Button className="gap-2">
-          <GithubIcon size={16} />
+        <Button className="gap-1">
+          <GithubIcon size={20} />
           Portfolio repository
         </Button>
-        <Button onClick={handleDownload} className="gap-2">
-          <FileTextIcon size={16} />
+        <Button onClick={handleDownload} className="gap-1">
+          <FileTextIcon size={20} />
           Download resume
         </Button>
       </div>
