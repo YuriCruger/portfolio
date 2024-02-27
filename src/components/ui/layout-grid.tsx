@@ -10,7 +10,6 @@ type Card = {
   description: string;
   image: string;
   className: string;
-  content: string;
 };
 
 export const LayoutGrid = ({ cards }: { cards: Card[] | undefined }) => {
@@ -28,8 +27,8 @@ export const LayoutGrid = ({ cards }: { cards: Card[] | undefined }) => {
 
   return (
     <div className="mx-auto grid h-full w-full max-w-7xl grid-cols-1  gap-4 p-10 md:grid-cols-3 ">
-      {cards?.map((card, i) => (
-        <div key={i} className={cn(card.className, "")}>
+      {cards?.map((card) => (
+        <div key={card.id} className={cn(card.className, "")}>
           <motion.div
             onClick={() => handleClick(card)}
             className={cn(
@@ -65,8 +64,9 @@ const BlurImage = ({ card }: { card: Card }) => {
   return (
     <Image
       src={card.image}
-      height="500"
-      width="500"
+      height="0"
+      width="0"
+      sizes="100vw"
       onLoad={() => setLoaded(true)}
       className={cn(
         "absolute inset-0 h-full w-full object-cover object-top transition duration-200",
@@ -104,7 +104,14 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
         }}
         className="relative z-[70] px-8 pb-4"
       >
-        {selected?.content}
+        <div className="text-center">
+          <p className="text-4xl font-bold text-white">
+            {selected?.title.toLocaleUpperCase()}
+          </p>
+          <p className="my-4 font-normal text-neutral-200">
+            {selected?.description}
+          </p>
+        </div>
       </motion.div>
     </div>
   );
