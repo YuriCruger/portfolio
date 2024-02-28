@@ -47,7 +47,7 @@ export function ImageContain({
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={cn(
-              "h-20 w-20 bg-zinc-500 opacity-[0.8]",
+              "h-20 w-20 bg-slate-900 opacity-[0.8] dark:bg-sky-300",
               borderClassName,
             )}
           />

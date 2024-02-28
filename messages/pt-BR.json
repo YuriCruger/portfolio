@@ -1,10 +1,10 @@
 {
   "header": {
     "navItems": {
-      "about": "Sobre",
-      "projects": "Projetos"
-    },
-    "button": "Contato"
+      "home": "início",
+      "about": "sobre",
+      "projects": "projetos"
+    }
   },
 
   "hero_section": {
@@ -15,6 +15,7 @@
   },
 
   "about_section": {
+    "id": "sobre",
     "title": {
       "about": "sobre",
       "skills": "habilidades"
@@ -33,10 +34,12 @@
   },
 
   "projects_section": {
-    "title": "projects"
+    "id": "projetos",
+    "title": "projetos"
   },
 
   "footer": {
+    "id": "contato",
     "title": "contato",
     "subtitle": "Obrigado por visitar meu portfólio.",
     "message": "Se você tiver alguma dúvida, sugestão ou oportunidade, por favor, preencha o formulário abaixo. Estou ansioso para ouvir de você!",

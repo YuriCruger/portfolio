@@ -11,7 +11,7 @@ export function ProjectsSection() {
 
   return (
     <section
-      id="projects"
+      id={t("id")}
       className="flex min-h-screen flex-col bg-slate-600/30 py-10 dark:bg-slate-800/50"
     >
       <SectionTitle title={t("title")} />

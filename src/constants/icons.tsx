@@ -4,11 +4,13 @@ import {
   LinkedinIcon,
   FolderOpenIcon,
   UserIcon,
+  HomeIcon,
 } from "lucide-react";
 
 export const NAV_ICONS = {
-  about: <UserIcon />,
-  projects: <FolderOpenIcon />,
+  home: <HomeIcon size={20} />,
+  about: <UserIcon size={20} />,
+  projects: <FolderOpenIcon size={20} />,
 };
 
 export const SOCIAL_ICONS = [

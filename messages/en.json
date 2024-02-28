@@ -1,10 +1,10 @@
 {
   "header": {
     "navItems": {
+      "home": "home",
       "about": "About",
       "projects": "Projects"
-    },
-    "button": "Contact"
+    }
   },
 
   "hero_section": {
@@ -15,6 +15,7 @@
   },
 
   "about_section": {
+    "id": "about",
     "title": {
       "about": "about",
       "skills": "skills"
@@ -33,10 +34,12 @@
   },
 
   "projects_section": {
+    "id": "projects",
     "title": "projects"
   },
 
   "footer": {
+    "id": "contact",
     "title": "contact",
     "subtitle": "Thank you for visiting my portfolio.",
     "message": "If you have any questions, suggestions, or opportunities, please fill out the form below. I look forward to hearing from you!",
