@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { SectionTitle } from "../SectionTitle";
 import me from "@public/me.png";
-import { ProfileInfo } from "../ProfileInfo";
+import { ProfileInfo } from "./components/ProfileInfo";
 import { TextRevealCard } from "../ui/text-reveal-card";
 import { TECHS } from "@/constants/techs";
-import { CardSkill } from "./components/cardSkill";
-import { ImageContain } from "../ui/moving-border";
+import { CardSkill } from "./components/CardSkill";
+import { ImageContain } from "../ui/image-contain";
 import { useTranslations } from "next-intl";
 
 export function AboutSection() {
