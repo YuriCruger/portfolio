@@ -17,19 +17,21 @@ export default function page() {
     secondProjects.find((p) => p.slug === project);
 
   const cards = selectedProject?.cards;
-  const repository = selectedProject?.repository!;
+  const repository = selectedProject?.repository;
   const webPage = selectedProject?.web;
 
   return (
     <div className="h-screen-80 w-full py-20">
       <BackgroundTextureOverlay />
       <div className="container flex items-center justify-center gap-5">
-        <Link href={repository} target="_blank">
-          <Button className="gap-1">
-            <GithubIcon size={20} />
-            GitHub Repository
-          </Button>
-        </Link>
+        {repository && (
+          <Link href={repository} target="_blank">
+            <Button className="gap-1">
+              <GithubIcon size={20} />
+              GitHub Repository
+            </Button>
+          </Link>
+        )}
         {webPage && (
           <Link href={webPage} target="_blank">
             <Button className="gap-1">
