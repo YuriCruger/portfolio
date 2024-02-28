@@ -1,12 +1,9 @@
 "use client";
 
-import {
-  ProjectFirstCardProps,
-  ProjectSecondCardProps,
-} from "@/constants/projects";
 import { cn } from "@/utils/cn";
-import React, { ReactNode, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ProjectCard } from "../ProjectCard";
+import { Project } from "@/types/product";
 
 export const InfiniteMovingCards = ({
   items,
@@ -15,7 +12,7 @@ export const InfiniteMovingCards = ({
   pauseOnHover = true,
   className,
 }: {
-  items: ProjectFirstCardProps[] | ProjectSecondCardProps[];
+  items: Project[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;

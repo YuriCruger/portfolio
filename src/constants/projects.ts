@@ -123,7 +123,7 @@ export const useSecondProjects = () => {
       slug: "nlw-food",
       title: t_food("title"),
       description: t_food("description"),
-      image: "/nlwFood.webp",
+      image: "/food_delivery/nlwFood.webp",
       repository: "https://github.com/YuriCruger/nlw-food-delivery",
       web: "",
       cards: [

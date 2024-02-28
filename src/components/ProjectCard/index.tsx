@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { ProjectFirstCardProps } from "@/constants/projects";
 import { Link } from "@/navigation";
+import { Project } from "@/types/product";
 
 interface ProjectProps {
-  project: ProjectFirstCardProps;
+  project: Project;
 }
 
 export function ProjectCard({ project }: ProjectProps) {
