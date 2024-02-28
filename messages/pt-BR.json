@@ -163,6 +163,12 @@
     "subtitle": "Obrigado por visitar meu portfólio.",
     "message": "Se você tiver alguma dúvida, sugestão ou oportunidade, por favor, preencha o formulário abaixo. Estou ansioso para ouvir de você!",
     "button": "Enviar",
-    "codeBy": "desenvolvido por"
+    "codeBy": "desenvolvido por",
+    "form": {
+      "name": "O campo de nome não pode estar vazio",
+      "email": "O campo de email não é válido",
+      "message": "O campo de mensagem não pode estar vazio",
+      "toast": "Mensagem enviada com sucesso!"
+    }
   }
 }

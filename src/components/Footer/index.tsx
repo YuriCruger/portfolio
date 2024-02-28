@@ -13,19 +13,20 @@ import { SectionTitle } from "../SectionTitle";
 import { BackgroundTextureOverlay } from "../BackgroundTextureOverlay";
 import { useTranslations } from "next-intl";
 
-const contactSchema = z.object({
-  name: z.string().min(1),
-  email: z.string().email(),
-  message: z.string().min(1),
-});
-
-type contactProps = z.infer<typeof contactSchema>;
-
 const webhookURL = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL!;
 
 export function Footer() {
   const t = useTranslations("footer");
   const { toast } = useToast();
+
+  const contactSchema = z.object({
+    name: z.string().min(1, t("form.name")),
+    email: z.string().email(t("form.email")),
+    message: z.string().min(1, t("form.message")),
+  });
+
+  type contactProps = z.infer<typeof contactSchema>;
+
   const {
     register,
     handleSubmit,
@@ -74,7 +75,7 @@ export function Footer() {
       });
 
       toast({
-        title: "Message sent successfully!",
+        title: t("form.toast"),
       });
 
       reset();
@@ -84,10 +85,7 @@ export function Footer() {
   }
 
   return (
-    <footer
-      id={t("id")}
-      className="relative flex flex-col justify-center gap-5 bg-zinc-200 py-5 dark:bg-zinc-950"
-    >
+    <footer className="relative flex flex-col justify-center gap-5 bg-zinc-200 py-5 dark:bg-zinc-950">
       <BackgroundTextureOverlay />
       <SectionTitle title={t("title")} />
       <div className="mx-auto sm:w-[500px]">
@@ -109,6 +107,9 @@ export function Footer() {
               <UserIcon />
             </IconContainer>
             <Input placeholder="Name" {...register("name")} />
+            {errors.name && (
+              <p className="text-xs text-red-500">{errors.name?.message}</p>
+            )}
           </div>
 
           <div className="relative">
@@ -116,16 +117,19 @@ export function Footer() {
               <MailIcon size={20} />
             </IconContainer>
             <Input placeholder="Email" {...register("email")} />
+            {errors.email && (
+              <p className="text-xs text-red-500">{errors.email.message}</p>
+            )}
           </div>
-          {errors.email && (
-            <p className="text-xs text-red-400">{errors.email.message}</p>
-          )}
 
           <div className="relative">
-            <IconContainer className="top-2.5 translate-y-0">
+            <IconContainer>
               <MessageSquareTextIcon size={20} />
             </IconContainer>
             <Textarea placeholder="Message" {...register("message")} />
+            {errors.message && (
+              <p className="text-xs text-red-500">{errors.message.message}</p>
+            )}
           </div>
 
           <Button disabled={isSubmitting} type="submit">
