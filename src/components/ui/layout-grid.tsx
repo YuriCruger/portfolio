@@ -69,7 +69,7 @@ const BlurImage = ({ card }: { card: Card }) => {
       sizes="100vw"
       onLoad={() => setLoaded(true)}
       className={cn(
-        "absolute inset-0 h-full w-full object-cover object-top transition duration-200",
+        "absolute inset-0 h-full w-full cursor-pointer object-cover object-top transition duration-200",
         loaded ? "blur-none" : "blur-md",
       )}
       alt="thumbnail"
@@ -79,7 +79,7 @@ const BlurImage = ({ card }: { card: Card }) => {
 
 const SelectedCard = ({ selected }: { selected: Card | null }) => {
   return (
-    <div className="relative z-[60] flex h-full w-full flex-col justify-end rounded-lg bg-transparent shadow-2xl">
+    <div className="relative z-[60] flex h-full w-full cursor-default flex-col justify-end rounded-lg bg-transparent shadow-2xl">
       <motion.div
         initial={{
           opacity: 0,
