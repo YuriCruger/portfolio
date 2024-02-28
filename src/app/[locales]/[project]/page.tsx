@@ -7,7 +7,7 @@ import { GithubIcon, GlobeIcon } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
-export default function page() {
+export default function Page() {
   const { project } = useParams();
   const firstProjects = useFirstProjects();
   const secondProjects = useSecondProjects();
