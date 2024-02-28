@@ -16,14 +16,14 @@ export function AboutSection() {
       id={t("id")}
       className="flex min-h-screen bg-slate-300 py-10 dark:bg-slate-900"
     >
-      <div className="container flex flex-col">
+      <div className="flex flex-col px-5 md:container">
         <SectionTitle title={t("title.about")} />
 
         <TextRevealCard text="Yuri Cruger" revealText={t("revealText")} />
 
         <div className="flex flex-col-reverse items-center gap-10 pb-5 md:flex-row">
           <div className="md:w-1/2">
-            <p className="tracking-widest text-zinc-700 dark:text-zinc-300">
+            <p className="text-wrap text-zinc-700 dark:text-zinc-300 md:tracking-widest">
               {t("description")}
             </p>
             <ProfileInfo />
@@ -46,9 +46,9 @@ export function AboutSection() {
           </div>
         </div>
 
-        <div className="container mt-auto ">
+        <div className="mt-auto">
           <SectionTitle title={t("title.skills")} />
-          <div className="grid grid-cols-2 gap-2 sm:grid-cols-2 xl:grid-cols-5">
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-5">
             {TECHS.map((tech) => (
               <CardSkill
                 key={tech.title}
