@@ -19,7 +19,11 @@ export function AboutSection() {
       <div className="flex flex-col px-5 md:container">
         <SectionTitle title={t("title.about")} />
 
-        <TextRevealCard text="Yuri Cruger" revealText={t("revealText")} />
+        <TextRevealCard
+          text="Yuri Cruger"
+          revealText={t("revealText")}
+          className="max-lg:hidden"
+        />
 
         <div className="flex flex-col-reverse items-center gap-10 pb-5 md:flex-row">
           <div className="md:w-1/2">
