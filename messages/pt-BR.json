@@ -170,5 +170,12 @@
       "message": "O campo de mensagem não pode estar vazio",
       "toast": "Mensagem enviada com sucesso!"
     }
+  },
+
+  "experience": {
+    "year": "{count, plural, one {# ano} other {# anos}}",
+    "month": "{count, plural, one {# mês} other {# meses}}",
+    "yearAndMonth": "{yearCount, plural, one {# ano} other {# anos}} e {monthCount, plural, one {# mês} other {# meses}}",
+    "months": "{count, plural, one {# mês} other {# meses}}"
   }
 }

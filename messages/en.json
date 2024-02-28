@@ -170,5 +170,12 @@
       "message": "The message field cannot be empty",
       "toast": "Message sent successfully!"
     }
+  },
+
+  "experience": {
+    "year": "{count, plural, one {# year} other {# years}}",
+    "month": "{count, plural, one {# month} other {# months}}",
+    "yearAndMonth": "{yearCount, plural, one {# year} other {# years}} and {monthCount, plural, one {# month} other {# months}}",
+    "months": "{count, plural, one {# month} other {# months}}"
   }
 }

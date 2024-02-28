@@ -54,7 +54,7 @@ export function AboutSection() {
                 key={tech.title}
                 title={tech.title}
                 icon={tech.icon}
-                time={tech.time}
+                startDate={tech.startDate}
               />
             ))}
           </div>
