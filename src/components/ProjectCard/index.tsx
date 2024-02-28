@@ -9,7 +9,7 @@ interface ProjectProps {
 
 export function ProjectCard({ project }: ProjectProps) {
   return (
-    <div className="group h-[170px] overflow-hidden rounded-md bg-gray-500/30 shadow-md shadow-zinc-900 transition-all hover:scale-95 dark:bg-zinc-800 dark:shadow-zinc-700 sm:h-[210px] lg:h-[320px] xl:h-[350px]">
+    <div className="group h-[170px] overflow-hidden rounded-md bg-gray-500/30 shadow-md shadow-zinc-900 transition-all hover:scale-95 dark:bg-zinc-800/50 dark:shadow-zinc-700 sm:h-[210px] lg:h-[320px] xl:h-[350px]">
       <div className="h-full w-full group-hover:hidden">
         <Image
           src={project.image}
