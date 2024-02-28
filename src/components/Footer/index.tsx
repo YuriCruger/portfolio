@@ -88,7 +88,7 @@ export function Footer() {
     <footer className="relative flex flex-col justify-center gap-5 bg-zinc-200 py-5 dark:bg-zinc-950">
       <BackgroundTextureOverlay />
       <SectionTitle title={t("title")} />
-      <div className="mx-auto sm:w-[500px]">
+      <div className="container sm:max-w-[700px]">
         <div className="mb-5 space-y-5 text-center">
           <span className="text-xl font-bold text-zinc-800 dark:text-zinc-300">
             {t("subtitle")}
