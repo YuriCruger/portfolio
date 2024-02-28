@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState, memo } from "react";
-import { motion } from "framer-motion";
+import { MotionValue, motion, motionValue } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { cn } from "@/utils/cn";
 
@@ -132,38 +132,71 @@ export const TextRevealCardDescription = ({
   );
 };
 
+type Star = {
+  key: string;
+  animate: {
+    top: string;
+    left: string;
+    opacity: number;
+    scale: number[];
+  };
+  transition: {
+    duration: number;
+    repeat: number;
+    ease: string;
+  };
+  style: {
+    position: MotionValue<string>;
+    top: string;
+    left: string;
+    width: string;
+    height: string;
+    backgroundColor: string;
+    borderRadius: string;
+    zIndex: number;
+  };
+};
+
 const Stars = () => {
-  const randomMove = () => Math.random() * 4 - 2;
-  const randomOpacity = () => Math.random();
-  const random = () => Math.random();
+  const [stars, setStars] = React.useState<Star[]>([]);
+
+  React.useEffect(() => {
+    const randomMove = () => Math.random() * 4 - 2;
+    const randomOpacity = () => Math.random();
+    const random = () => Math.random();
+
+    const newStars = [...Array(140)].map((_, i) => ({
+      key: `star-${i}`,
+      animate: {
+        top: `calc(${random() * 100}% + ${randomMove()}px)`,
+        left: `calc(${random() * 100}% + ${randomMove()}px)`,
+        opacity: randomOpacity(),
+        scale: [1, 1.2, 0],
+      },
+      transition: {
+        duration: random() * 10 + 20,
+        repeat: Infinity,
+        ease: "linear",
+      },
+      style: {
+        position: motionValue("absolute"),
+        top: `${random() * 100}%`,
+        left: `${random() * 100}%`,
+        width: `2px`,
+        height: `2px`,
+        backgroundColor: "white",
+        borderRadius: "50%",
+        zIndex: 1,
+      },
+    }));
+
+    setStars(newStars);
+  }, []);
+
   return (
     <div className="absolute inset-0">
-      {[...Array(140)].map((_, i) => (
-        <motion.span
-          key={`star-${i}`}
-          animate={{
-            top: `calc(${random() * 100}% + ${randomMove()}px)`,
-            left: `calc(${random() * 100}% + ${randomMove()}px)`,
-            opacity: randomOpacity(),
-            scale: [1, 1.2, 0],
-          }}
-          transition={{
-            duration: random() * 10 + 20,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          style={{
-            position: "absolute",
-            top: `${random() * 100}%`,
-            left: `${random() * 100}%`,
-            width: `2px`,
-            height: `2px`,
-            backgroundColor: "white",
-            borderRadius: "50%",
-            zIndex: 1,
-          }}
-          className="inline-block"
-        ></motion.span>
+      {stars.map(({ key, ...star }) => (
+        <motion.span key={key} {...star} className="inline-block"></motion.span>
       ))}
     </div>
   );
