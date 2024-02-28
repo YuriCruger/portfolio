@@ -7,6 +7,7 @@ import { SectionTitle } from "../SectionTitle";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 import { BackgroundTextureOverlay } from "../BackgroundTextureOverlay";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export function HeroSection() {
   const t = useTranslations("hero_section");
@@ -51,10 +52,12 @@ export function HeroSection() {
       </div>
 
       <div className="container mt-auto flex flex-col justify-center gap-5 pb-2 pt-5 sm:flex-row">
-        <Button className="gap-1">
-          <GithubIcon size={20} />
-          {t("repository")}
-        </Button>
+        <Link href="https://github.com/YuriCruger/portfolio" target="_blank">
+          <Button className="gap-1">
+            <GithubIcon size={20} />
+            {t("repository")}
+          </Button>
+        </Link>
         <Button onClick={handleDownload} className="gap-1">
           <FileTextIcon size={20} />
           {t("resume")}
