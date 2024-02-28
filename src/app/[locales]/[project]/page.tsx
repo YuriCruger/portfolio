@@ -2,20 +2,19 @@
 import { BackgroundTextureOverlay } from "@/components/BackgroundTextureOverlay";
 import { Button } from "@/components/ui/button";
 import { LayoutGrid } from "@/components/ui/layout-grid";
-import {
-  PROJECTS_CARDS_FIRST,
-  PROJECTS_CARDS_SECOND,
-} from "@/constants/projects";
+import { useFirstProjects, useSecondProjects } from "@/constants/projects";
 import { GithubIcon, GlobeIcon } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
 export default function page() {
   const { project } = useParams();
+  const firstProjects = useFirstProjects();
+  const secondProjects = useSecondProjects();
 
   const selectedProject =
-    PROJECTS_CARDS_FIRST.find((p) => p.slug === project) ||
-    PROJECTS_CARDS_SECOND.find((p) => p.slug === project);
+    firstProjects.find((p) => p.slug === project) ||
+    secondProjects.find((p) => p.slug === project);
 
   const cards = selectedProject?.cards;
   const repository = selectedProject?.repository!;

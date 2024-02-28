@@ -1,13 +1,12 @@
-import {
-  PROJECTS_CARDS_FIRST,
-  PROJECTS_CARDS_SECOND,
-} from "@/constants/projects";
+import { useFirstProjects, useSecondProjects } from "@/constants/projects";
 import { SectionTitle } from "../SectionTitle";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 import { useTranslations } from "next-intl";
 
 export function ProjectsSection() {
   const t = useTranslations("projects_section");
+  const firstProjects = useFirstProjects();
+  const secondProjects = useSecondProjects();
 
   return (
     <section
@@ -17,12 +16,12 @@ export function ProjectsSection() {
       <SectionTitle title={t("title")} />
       <div className="flex flex-1 flex-col justify-center">
         <InfiniteMovingCards
-          items={PROJECTS_CARDS_FIRST}
+          items={firstProjects}
           direction="right"
           speed="normal"
         />
         <InfiniteMovingCards
-          items={PROJECTS_CARDS_SECOND}
+          items={secondProjects}
           direction="left"
           speed="normal"
         />

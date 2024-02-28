@@ -1,236 +1,225 @@
-export const PROJECTS_CARDS_FIRST = [
-  {
-    id: "1",
-    slug: "market-admin",
-    title: "Market Admin",
-    description:
-      "This web project, developed in React and Next.js with TypeScript, provides an effective solution for inventory management. Highlights include secure authentication via Google, an interactive inventory page with features such as addition, deletion, filtering, and export to Excel. The dashboard presents visual insights into inventory by category, using dynamic charts from the Recharts library. Integration with Firebase ensures a reliable experience, while Redux manages the application state for smooth and efficient navigation.",
-    image: "/market.png",
-    repository: "https://github.com/YuriCruger/Market-adm",
-    web: "https://market-adm.vercel.app/",
-    cards: [
-      {
-        id: "1",
-        title: "dashboard",
-        description:
-          "The dashboard page consolidates information about the available products. On it, you will find the total number of products, the total revenue from the products, and the product with the lowest stock. Additionally, there is a chart illustrating the quantity of stock per category.",
-        image: "/market.png",
-        className: "md:col-span-2",
-      },
-      {
-        id: "2",
-        title: "login",
-        description:
-          "The login screen provides quick access via email/password or Google, with secure validation through Firebase. New users can easily register. In case of forgotten password, recovery is possible through a reset email. Convenient and secure.",
-        image: "/market_login.png",
-        className: "md:col-span-1",
-      },
-      {
-        id: "3",
-        title: "Cloud Firestore",
-        description:
-          "The project is integrated with Firebase, using it as both the database and authentication system. Any interaction with the table is automatically updated in the real-time database.",
-        image: "/market_firebase.png",
-        className: "md:col-span-1",
-      },
-      {
-        id: "4",
-        title: "table",
-        description:
-          "The product table lists and organizes all available items. Through a simple form, users can add and delete products. Name filtering facilitates searches, and the Excel download option provides convenience in data management.",
-        image: "/market_table.png",
-        className: "md:col-span-2",
-      },
-    ],
-  },
-  {
-    id: "2",
-    slug: "dine-restaurant",
-    title: "Dine Restaurant",
-    description:
-      "I present Dine, my front-end project inspired by Frontendmentor. Developed with React, I used Hook Form and Zod to enhance form validation efficiently. Styling is done with Styled Components, providing an elegant and flexible design.",
-    image: "/dine.png",
-    repository: "https://github.com/YuriCruger/Restaurant",
-    web: "https://restaurant-web-vercel.vercel.app/",
-    cards: [
-      {
-        id: "1",
-        title: "home page",
-        description:
-          "The home page of the 'Dine' project features an impressive design developed with Styled Components. It stands out for its responsiveness and modern layout, providing a engaging visual experience across various devices.",
-        image: "/dine/dine_homepage.png",
-        className: "md:col-span-2",
-      },
-      {
-        id: "2",
-        title: "modal reservation",
-        description:
-          "A reservation confirmation modal displaying the entered information upon form completion.",
-        image: "/dine/dine_modal.png",
-        className: "md:col-span-1",
-      },
-      {
-        id: "3",
-        title: "booking page",
-        description:
-          "The 'Booking Page' is a dedicated page for filling out the restaurant reservation form. Employing validation, the form utilizes the capabilities of Hook Form and Zod to ensure accuracy and integrity of the entered data.",
-        image: "/dine/dine_booking.png",
-        className: "md:col-span-3",
-      },
-    ],
-  },
-  {
-    id: "3",
-    slug: "nlw-notes",
-    title: "NLW Notes",
-    description:
-      "Developed during the Rocketseat NLW Expert event, this project allows creating voice notes using the SpeechRecognition API. With technologies such as TypeScript, React, and Tailwind, users can add, edit, and remove notes, both through text and voice.",
-    image: "/nlwNotes.png",
-    repository: "https://github.com/YuriCruger/nlw-notes",
-    web: "https://nlw-notes-eight.vercel.app/",
-    cards: [
-      {
-        id: "1",
-        title: "Notes",
-        description:
-          "The home page of the 'Dine' project features an impressive design developed with Styled Components. It stands out for its responsiveness and modern layout, providing a engaging visual experience across various devices.",
-        image: "/notes/nlwNotes.png",
-        className: "md:col-span-3",
-      },
-      {
-        id: "2",
-        title: "New note",
-        description:
-          "A reservation confirmation modal displaying the entered information upon form completion.",
-        image: "/notes/notes_new_note.png",
-        className: "md:col-span-1",
-      },
-      {
-        id: "3",
-        title: "Certificate",
-        description: "",
-        image: "/notes/notes_certificate.png",
-        className: "md:col-span-2",
-      },
-    ],
-  },
-];
+import { useTranslations } from "next-intl";
 
-export const PROJECTS_CARDS_SECOND = [
-  {
-    id: "4",
-    slug: "nlw-food",
-    title: "NLW Food Delivery",
-    description:
-      "This project was created during the Rocketseat NLW event and developed in React Native, utilizing technologies like Zustand and Tailwind. It is a food delivery application, allowing users to choose orders, access the shopping cart, and send the order via WhatsApp message.",
-    image: "/nlwFood.webp",
-    repository: "https://github.com/YuriCruger/nlw-food-delivery",
-    web: "",
-    cards: [
-      {
-        id: "1",
-        title: "Home page",
-        description:
-          "Developed in React Native, similar to the interface of food delivery apps like iFood. Users can navigate through the intuitive home page and place orders on the store page.",
-        image: "/food_delivery/food_home.png",
-        className: "md:col-span-1 md:row-span-2",
-      },
-      {
-        id: "2",
-        title: "Cart",
-        description:
-          "This is the shopping cart page where all selected products are displayed. The page calculates the total order amount. Additionally, there is a message field available for users to input delivery information.",
-        image: "/food_delivery/food_cart.png",
-        className: "md:col-span-1 md:row-span-2",
-      },
-      {
-        id: "3",
-        title: "Product page",
-        description:
-          "This is the individual product page, showcasing detailed information about the item. Users have the option to add the product to their shopping cart directly from this page.",
-        image: "/food_delivery/food_product.png",
-        className: "md:col-span-1 md:row-span-1",
-      },
-      {
-        id: "4",
-        title: "Certificate",
-        description: "",
-        image: "/food_delivery/food_certificate.jpeg",
-        className: "md:col-span-1",
-      },
-    ],
-  },
-  {
-    id: "5",
-    slug: "quiz-app",
-    title: "Quiz App",
-    description:
-      "The Quiz App is an interactive question and answer application, created as part of a challenge proposed by Frontend Mentor. It offers users the option to choose between light and dark modes. This project was developed using React, Axios, React Query, TailwindCSS, and TypeScript. The quiz content is fully powered by an API, ensuring the update and diversity of the questions.",
-    image: "/quiz.png",
-    repository: "https://github.com/YuriCruger/quiz-app-main",
-    web: "https://quiz-web-gilt.vercel.app/",
-    cards: [
-      {
-        id: "1",
-        title: "home page",
-        description:
-          "The homepage allows users to choose the quiz theme and switch between dark and light layout modes using a toggle switch.",
-        image: "/quiz/quiz.png",
-        className: "md:col-span-2",
-      },
-      {
-        id: "2",
-        title: "home page - dark mode",
-        description: "",
-        image: "/quiz/quiz_dark.png",
-        className: "md:col-span-1",
-      },
-      {
-        id: "3",
-        title: "questions",
-        description:
-          "The user receives a question, chooses an answer, and upon submitting the response, views both incorrect and correct answers. A progress bar indicates how many questions are still remaining.",
-        image: "/quiz/quiz_questions.png",
-        className: "md:col-span-2",
-      },
-      {
-        id: "4",
-        title: "result",
-        description:
-          "Displays the number of correct answers obtained by the user and provides the option to play again.",
-        image: "/quiz/quiz_result.png",
-        className: "md:col-span-1",
-      },
-    ],
-  },
-  {
-    id: "6",
-    slug: "todo",
-    title: "Todo",
-    description:
-      "The Todo is my first React project, developed in response to a challenge from Frontend Mentor. This responsive task list application offers light and dark modes. Through this project, I was able to explore and apply fundamental React concepts, marking the beginning of my journey in web application development.",
-    image: "/todo.png",
-    repository: "https://github.com/YuriCruger/todo-app",
-    web: "https://todo-app-web-nine.vercel.app/",
-    cards: [
-      {
-        id: "1",
-        title: "todo",
-        description:
-          "Allows adding and deleting tasks, marking them as completed, filtering between all, active, or completed tasks, and provides a button to clear completed tasks. A counter displays how many tasks are still pending.",
-        image: "/todo/todo_light.png",
-        className: "md:col-span-3",
-      },
-      {
-        id: "2",
-        title: "dark-mode",
-        description: "",
-        image: "/todo/todo_dark.png",
-        className: "md:col-span-3",
-      },
-    ],
-  },
-];
+export const useFirstProjects = () => {
+  const t_market = useTranslations("projects_section.projects.market_admin");
+  const t_dine = useTranslations("projects_section.projects.dine_restaurant");
+  const t_notes = useTranslations("projects_section.projects.nlw_notes");
 
-export type ProjectFirstCardProps = (typeof PROJECTS_CARDS_FIRST)[number];
-export type ProjectSecondCardProps = (typeof PROJECTS_CARDS_SECOND)[number];
+  return [
+    {
+      id: "1",
+      slug: "market-admin",
+      title: t_market("title"),
+      description: t_market("description"),
+      image: "/market/market.png",
+      repository: "https://github.com/YuriCruger/Market-adm",
+      web: "https://market-adm.vercel.app/",
+      cards: [
+        {
+          id: "1",
+          title: t_market("cards.first.title"),
+          description: t_market("cards.first.description"),
+          image: "/market.png",
+          className: "md:col-span-2",
+        },
+        {
+          id: "2",
+          title: t_market("cards.second.title"),
+          description: t_market("cards.second.description"),
+          image: "/market_login.png",
+          className: "md:col-span-1",
+        },
+        {
+          id: "3",
+          title: t_market("cards.third.title"),
+          description: t_market("cards.third.description"),
+          image: "/market_firebase.png",
+          className: "md:col-span-1",
+        },
+        {
+          id: "4",
+          title: t_market("cards.fourth.title"),
+          description: t_market("cards.fourth.description"),
+          image: "/market_table.png",
+          className: "md:col-span-2",
+        },
+      ],
+    },
+    {
+      id: "2",
+      slug: "dine-restaurant",
+      title: t_dine("title"),
+      description: t_dine("description"),
+      image: "/dine/dine_homepage.png",
+      repository: "https://github.com/YuriCruger/Restaurant",
+      web: "https://restaurant-web-vercel.vercel.app/",
+      cards: [
+        {
+          id: "1",
+          title: t_dine("cards.first.title"),
+          description: t_dine("cards.first.description"),
+          image: "/dine/dine_homepage.png",
+          className: "md:col-span-2",
+        },
+        {
+          id: "2",
+          title: t_dine("cards.second.title"),
+          description: t_dine("cards.second.description"),
+          image: "/dine/dine_modal.png",
+          className: "md:col-span-1",
+        },
+        {
+          id: "3",
+          title: t_dine("cards.third.title"),
+          description: t_dine("cards.third.description"),
+          image: "/dine/dine_booking.png",
+          className: "md:col-span-3",
+        },
+      ],
+    },
+    {
+      id: "3",
+      slug: "nlw-notes",
+      title: t_notes("title"),
+      description: t_notes("description"),
+      image: "/notes/nlwNotes.png",
+      repository: "https://github.com/YuriCruger/nlw-notes",
+      web: "https://nlw-notes-eight.vercel.app/",
+      cards: [
+        {
+          id: "1",
+          title: t_notes("cards.first.title"),
+          description: t_notes("cards.first.description"),
+          image: "/notes/nlwNotes.png",
+          className: "md:col-span-3",
+        },
+        {
+          id: "2",
+          title: t_notes("cards.second.title"),
+          description: t_notes("cards.second.description"),
+          image: "/notes/notes_new_note.png",
+          className: "md:col-span-1",
+        },
+        {
+          id: "3",
+          title: t_notes("cards.third.title"),
+          description: "",
+          image: "/notes/notes_certificate.png",
+          className: "md:col-span-2",
+        },
+      ],
+    },
+  ];
+};
+
+export const useSecondProjects = () => {
+  const t_food = useTranslations("projects_section.projects.nlw_food");
+  const t_quiz = useTranslations("projects_section.projects.quiz_app");
+  const t_todo = useTranslations("projects_section.projects.todo");
+
+  return [
+    {
+      id: "4",
+      slug: "nlw-food",
+      title: t_food("title"),
+      description: t_food("description"),
+      image: "/nlwFood.webp",
+      repository: "https://github.com/YuriCruger/nlw-food-delivery",
+      web: "",
+      cards: [
+        {
+          id: "1",
+          title: t_food("cards.first.title"),
+          description: t_food("cards.first.description"),
+          image: "/food_delivery/food_home.png",
+          className: "md:col-span-1 md:row-span-2",
+        },
+        {
+          id: "2",
+          title: t_food("cards.second.title"),
+          description: t_food("cards.second.description"),
+          image: "/food_delivery/food_cart.png",
+          className: "md:col-span-1 md:row-span-2",
+        },
+        {
+          id: "3",
+          title: t_food("cards.third.title"),
+          description: t_food("cards.third.description"),
+          image: "/food_delivery/food_product.png",
+          className: "md:col-span-1 md:row-span-1",
+        },
+        {
+          id: "4",
+          title: t_food("cards.fourth.title"),
+          description: "",
+          image: "/food_delivery/food_certificate.jpeg",
+          className: "md:col-span-1",
+        },
+      ],
+    },
+    {
+      id: "5",
+      slug: "quiz-app",
+      title: t_quiz("title"),
+      description: t_quiz("description"),
+      image: "/quiz/quiz.png",
+      repository: "https://github.com/YuriCruger/quiz-app-main",
+      web: "https://quiz-web-gilt.vercel.app/",
+      cards: [
+        {
+          id: "1",
+          title: t_quiz("cards.first.title"),
+          description: t_quiz("cards.first.description"),
+          image: "/quiz/quiz.png",
+          className: "md:col-span-2",
+        },
+        {
+          id: "2",
+          title: t_quiz("cards.second.title"),
+          description: "",
+          image: "/quiz/quiz_dark.png",
+          className: "md:col-span-1",
+        },
+        {
+          id: "3",
+          title: t_quiz("cards.third.title"),
+          description: t_quiz("cards.third.description"),
+          image: "/quiz/quiz_questions.png",
+          className: "md:col-span-2",
+        },
+        {
+          id: "4",
+          title: t_quiz("cards.fourth.title"),
+          description: t_quiz("cards.fourth.description"),
+          image: "/quiz/quiz_result.png",
+          className: "md:col-span-1",
+        },
+      ],
+    },
+    {
+      id: "6",
+      slug: "todo",
+      title: t_todo("title"),
+      description: t_todo("description"),
+      image: "/todo/todo_dark.png",
+      repository: "https://github.com/YuriCruger/todo-app",
+      web: "https://todo-app-web-nine.vercel.app/",
+      cards: [
+        {
+          id: "1",
+          title: t_todo("cards.first.title"),
+          description: t_todo("cards.first.description"),
+          image: "/todo/todo_light.png",
+          className: "md:col-span-3",
+        },
+        {
+          id: "2",
+          title: t_todo("cards.second.title"),
+          description: "",
+          image: "/todo/todo_dark.png",
+          className: "md:col-span-3",
+        },
+      ],
+    },
+  ];
+};

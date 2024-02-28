@@ -35,7 +35,127 @@
 
   "projects_section": {
     "id": "projetos",
-    "title": "projetos"
+    "title": "projetos",
+    "projects": {
+      "market_admin": {
+        "title": "Administração de Mercado",
+        "description": "Este projeto web, desenvolvido em React e Next.js com TypeScript, oferece uma solução eficaz para o gerenciamento de inventário. Destaques incluem autenticação segura via Google, uma página interativa de inventário com funcionalidades como adição, exclusão, filtragem e exportação para Excel. O painel apresenta insights visuais sobre o inventário por categoria, utilizando gráficos dinâmicos da biblioteca Recharts. A integração com o Firebase garante uma experiência confiável, enquanto o Redux gerencia o estado da aplicação para uma navegação suave e eficiente.",
+        "cards": {
+          "first": {
+            "title": "Painel de controle",
+            "description": "A página do painel de controle consolida informações sobre os produtos disponíveis. Nela, você encontrará o número total de produtos, a receita total dos produtos e o produto com o estoque mais baixo. Além disso, há um gráfico ilustrando a quantidade de estoque por categoria."
+          },
+          "second": {
+            "title": "Página de Login",
+            "description": "A tela de login oferece acesso rápido via e-mail/senha ou Google, com validação segura através do Firebase. Novos usuários podem se registrar facilmente. Em caso de esquecimento de senha, a recuperação é possível por meio de um e-mail de redefinição. Conveniente e seguro."
+          },
+          "third": {
+            "title": "Cloud Firestore",
+            "description": "O projeto está integrado com o Firebase, utilizando-o tanto como banco de dados quanto sistema de autenticação. Qualquer interação com a tabela é automaticamente atualizada no banco de dados em tempo real."
+          },
+          "fourth": {
+            "title": "tabela",
+            "description": "A tabela de produtos lista e organiza todos os itens disponíveis. Através de um formulário simples, os usuários podem adicionar e excluir produtos. A filtragem por nome facilita buscas, e a opção de download em Excel proporciona praticidade na gestão de dados."
+          }
+        }
+      },
+
+      "dine_restaurant": {
+        "title": "Restaurante Dine",
+        "description": "Apresento o Dine, meu projeto de front-end inspirado no Frontendmentor. Desenvolvido com React, utilizei o Hook Form e o Zod para aprimorar a validação de formulários de maneira eficiente. O estilo foi feito com Styled Components, proporcionando um design elegante e flexível.",
+        "cards": {
+          "first": {
+            "title": "Página Inicial",
+            "description": "A página inicial do projeto 'Dine' apresenta um design impressionante desenvolvido com Styled Components. Destaca-se por sua responsividade e layout moderno, proporcionando uma experiência visual envolvente em diversos dispositivos."
+          },
+          "second": {
+            "title": "modal de reserva",
+            "description": "Modal de confirmação de reserva exibindo as informações inseridas após o preenchimento do formulário."
+          },
+          "third": {
+            "title": "Página de reserva",
+            "description": "A 'Página de Reserva' é uma página dedicada para preencher o formulário de reserva do restaurante. Utilizando validação, o formulário emprega as capacidades do Hook Form e Zod para garantir precisão e integridade dos dados inseridos."
+          }
+        }
+      },
+
+      "nlw_notes": {
+        "title": "NLW Notas",
+        "description": "Desenvolvido durante o evento Rocketseat NLW Expert, este projeto permite criar notas de voz utilizando a API de reconhecimento de fala (SpeechRecognition). Com tecnologias como TypeScript, React e Tailwind, os usuários podem adicionar, editar e remover notas, tanto por meio de texto quanto por voz.",
+        "cards": {
+          "first": {
+            "title": "Notas",
+            "description": "A página exibe todas as notas de forma clara e oferece um cartão intuitivo para adicionar novas notas."
+          },
+          "second": {
+            "title": "Nova nota",
+            "description": "Um cartão para adicionar novas notas, permitindo a gravação por voz usando a API de reconhecimento de fala (SpeechRecognition) ou entrada de texto."
+          },
+          "third": {
+            "title": "Certificado"
+          }
+        }
+      },
+
+      "nlw_food": {
+        "title": "NLW Food Delivery",
+        "description": "Este projeto foi criado durante o evento NLW da Rocketseat e desenvolvido em React Native, utilizando tecnologias como Zustand e Tailwind. Trata-se de um aplicativo de entrega de alimentos, permitindo que os usuários escolham pedidos, acessem o carrinho de compras e enviem o pedido por meio de mensagem no WhatsApp.",
+        "cards": {
+          "first": {
+            "title": "Página inicial",
+            "description": "Desenvolvida em React Native, semelhante à interface de aplicativos de entrega de alimentos como iFood. Os usuários podem navegar pela página inicial intuitiva e fazer pedidos na página da loja."
+          },
+          "second": {
+            "title": "Carrinho",
+            "description": "Esta é a página do carrinho de compras, onde todos os produtos selecionados são exibidos. A página calcula o valor total do pedido. Além disso, há um campo de mensagem disponível para os usuários inserirem informações de entrega."
+          },
+          "third": {
+            "title": "Página do produto",
+            "description": "Esta é a página individual do produto, mostrando informações detalhadas sobre o item. Os usuários têm a opção de adicionar o produto ao carrinho diretamente desta página."
+          },
+          "fourth": {
+            "title": "Certificado"
+          }
+        }
+      },
+
+      "quiz_app": {
+        "title": "Quiz App",
+        "description": "O Quiz App é uma aplicação interativa de perguntas e respostas, criada como parte de um desafio proposto pelo Frontend Mentor. Oferece aos usuários a opção de escolher entre os modos claro e escuro. Este projeto foi desenvolvido utilizando React, Axios, React Query, TailwindCSS e TypeScript. O conteúdo do quiz é totalmente alimentado por uma API, garantindo a atualização e diversidade das perguntas.",
+        "cards": {
+          "first": {
+            "title": "Página inicial",
+            "description": "A página inicial permite aos usuários escolher o tema do quiz e alternar entre os modos de layout claro e escuro usando um interruptor de alternância."
+          },
+          "second": {
+            "title": "Página inicial - modo escuro",
+            "description": ""
+          },
+          "third": {
+            "title": "Perguntas",
+            "description": "O usuário recebe uma pergunta, escolhe uma resposta e, ao enviar a resposta, visualiza tanto as respostas incorretas quanto as corretas. Uma barra de progresso indica quantas perguntas ainda estão pendentes."
+          },
+          "fourth": {
+            "title": "Resultado",
+            "description": "Exibe o número de respostas corretas obtidas pelo usuário e oferece a opção de jogar novamente."
+          }
+        }
+      },
+
+      "todo": {
+        "title": "Lista de Tarefas",
+        "description": "A Lista de Tarefas é o meu primeiro projeto em React, desenvolvido como resposta a um desafio do Frontend Mentor. Esta aplicação responsiva de lista de tarefas oferece modos claro e escuro. Através deste projeto, pude explorar e aplicar conceitos fundamentais do React, marcando o início da minha jornada no desenvolvimento de aplicações web.",
+        "cards": {
+          "first": {
+            "title": "Lista de Tarefas",
+            "description": "Permite adicionar e excluir tarefas, marcá-las como concluídas, filtrar entre todas, tarefas ativas ou concluídas, e fornece um botão para limpar as tarefas concluídas. Um contador exibe quantas tarefas ainda estão pendentes."
+          },
+          "second": {
+            "title": "Modo Escuro"
+          }
+        }
+      }
+    }
   },
 
   "footer": {

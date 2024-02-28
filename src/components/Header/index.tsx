@@ -2,7 +2,7 @@
 import { NavItem } from "./components/NavItem";
 import { motion } from "framer-motion";
 import { Switch } from "../ui/switch";
-import { MoonIcon, SunIcon } from "lucide-react";
+import { MenuIcon, MoonIcon, SunIcon } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import {
   Select,
@@ -11,12 +11,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 
 export function Header() {
-  const t = useTranslations("header");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
+  const t = useTranslations("header");
   const router = useRouter();
   const localActive = useLocale();
 
@@ -24,6 +25,8 @@ export function Header() {
     const sectionSelected = document.querySelector(`#${section}`);
     if (sectionSelected) {
       sectionSelected.scrollIntoView({ behavior: "smooth" });
+      document.body.style.overflow = "auto";
+      setIsMenuOpen(false);
     }
   };
 
@@ -41,6 +44,16 @@ export function Header() {
     });
   }
 
+  function openMenu() {
+    setIsMenuOpen(true);
+    document.body.style.overflow = "hidden";
+  }
+
+  function handleOutsideClick() {
+    setIsMenuOpen(false);
+    document.body.style.overflow = "auto";
+  }
+
   return (
     <motion.header
       initial="hidden"
@@ -49,42 +62,56 @@ export function Header() {
         hidden: { opacity: 0, y: -20 },
         visible,
       }}
-      className="container mx-auto flex h-[80px] items-center py-5 font-semibold text-zinc-900 dark:text-zinc-300"
+      className="container h-[80px] py-5 font-semibold text-zinc-900 dark:text-zinc-300"
     >
-      <nav className="flex items-center gap-4 sm:gap-10">
-        <NavItem href="/" title={t("navItems.home")} icon="home" />
-        <NavItem
-          title={t("navItems.about")}
-          scrollToSection={scrollToSection}
-          icon="about"
-        />
-        <NavItem
-          title={t("navItems.projects")}
-          scrollToSection={scrollToSection}
-          icon="projects"
-        />
-      </nav>
+      <button onClick={openMenu} className="md:hidden">
+        <MenuIcon size={28} />
+      </button>
 
-      <div className="ml-auto flex items-center gap-4 sm:gap-10">
-        <div className="ml-4 flex items-center gap-2">
-          <SunIcon className="max-sm:hidden" />
-          <Switch onCheckedChange={toggleTheme} />
-          <MoonIcon className="max-sm:hidden" />
+      <motion.div
+        onClick={handleOutsideClick}
+        className={`absolute left-0 top-0 z-10 h-full w-full bg-black opacity-0 md:hidden ${isMenuOpen ? "pointer-events-auto" : "pointer-events-none"}`}
+        animate={{ opacity: isMenuOpen ? 0.3 : 0 }}
+      />
+
+      <div
+        className={`z-20 flex flex-col gap-4 rounded-md bg-zinc-300 p-3 opacity-0 duration-300 dark:bg-zinc-800 max-md:absolute md:flex-row md:items-center md:gap-0 md:rounded-none md:bg-transparent md:p-0 md:opacity-100 dark:md:bg-transparent ${isMenuOpen && "opacity-100"}`}
+      >
+        <nav className="flex flex-col gap-4 md:flex-row md:items-center">
+          <NavItem href="/" title={t("navItems.home")} icon="home" />
+          <NavItem
+            title={t("navItems.about")}
+            scrollToSection={scrollToSection}
+            icon="about"
+          />
+          <NavItem
+            title={t("navItems.projects")}
+            scrollToSection={scrollToSection}
+            icon="projects"
+          />
+        </nav>
+
+        <div className="ml-auto flex flex-col gap-4 md:flex-row md:items-center">
+          <div className="flex items-center gap-2 md:ml-4">
+            <SunIcon className="max-sm:hidden" />
+            <Switch onCheckedChange={toggleTheme} />
+            <MoonIcon className="max-sm:hidden" />
+          </div>
+
+          <Select
+            defaultValue={localActive}
+            onValueChange={onSelectChange}
+            disabled={isPending}
+          >
+            <SelectTrigger>
+              <SelectValue placeholder="Language" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="en">English</SelectItem>
+              <SelectItem value="pt-BR">Português-BR</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
-
-        <Select
-          defaultValue={localActive}
-          onValueChange={onSelectChange}
-          disabled={isPending}
-        >
-          <SelectTrigger>
-            <SelectValue placeholder="Language" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="en">English</SelectItem>
-            <SelectItem value="pt-BR">Português-BR</SelectItem>
-          </SelectContent>
-        </Select>
       </div>
     </motion.header>
   );
