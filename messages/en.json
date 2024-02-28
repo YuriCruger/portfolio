@@ -22,12 +22,12 @@
     },
     "revealText": "For me, it was just 'I love what I do, so I want to do as much of it as possible.' - Kobe Bryant",
     "description": "I embarked on my journey into the programming world in 2023 as a self-taught enthusiast. Throughout this period, I dedicated myself to various study projects that allowed me to enhance my skills and understanding of fundamental concepts. Now, I feel prepared to embrace professional opportunities that enable me to apply and expand my knowledge. My primary focus is on web and mobile development, with a specialization in React and React Native. I am eager to contribute my passion for programming and my ability to learn quickly to the success of future projects.",
-    "infoTitle": {
+    "nameLabel": {
       "name": "name",
       "birth": "birth",
       "position": "position"
     },
-    "infoDescription": {
+    "fieldValue": {
       "birth": "November 3, 2000",
       "position": "Freelancer, Front-end Developer"
     }
@@ -159,7 +159,6 @@
   },
 
   "footer": {
-    "id": "contact",
     "title": "contact",
     "subtitle": "Thank you for visiting my portfolio.",
     "message": "If you have any questions, suggestions, or opportunities, please fill out the form below. I look forward to hearing from you!",

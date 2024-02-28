@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { SectionTitle } from "../SectionTitle";
 import me from "@public/me.png";
-import { ProfileInfo } from "./components/ProfileInfo";
 import { TextRevealCard } from "../ui/text-reveal-card";
 import { TECHS } from "@/constants/techs";
 import { CardSkill } from "./components/CardSkill";
 import { ImageContain } from "../ui/image-contain";
 import { useTranslations } from "next-intl";
+import { ProfileInfo } from "./components/ProfileInfo";
 
 export function AboutSection() {
   const t = useTranslations("about_section");
@@ -26,22 +26,7 @@ export function AboutSection() {
             <p className="tracking-widest text-zinc-700 dark:text-zinc-300">
               {t("description")}
             </p>
-            <div className="mt-5">
-              <ProfileInfo
-                title={t("infoTitle.name")}
-                description="Yuri Cruger"
-              />
-              <ProfileInfo
-                title={t("infoTitle.birth")}
-                description={t("infoDescription.birth")}
-              />
-
-              <ProfileInfo
-                title={t("infoTitle.position")}
-                description={t("infoDescription.position")}
-              />
-              <ProfileInfo title="email" description="aoddrewiid@gmail.com" />
-            </div>
+            <ProfileInfo />
           </div>
 
           <div className="flex justify-center md:w-1/2">
