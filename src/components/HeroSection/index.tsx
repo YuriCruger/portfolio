@@ -21,8 +21,8 @@ export function HeroSection() {
   };
 
   return (
-    <section className="flex h-screen-80 flex-col items-center justify-center">
-      <BackgroundTextureOverlay />
+    <section className="flex h-screen-80 flex-col items-center justify-center ">
+      <BackgroundTextureOverlay className="h-screen" />
 
       <div className="container flex flex-1 flex-col items-center justify-center gap-5">
         <SectionTitle title={t("title")} className="pb-0" />
