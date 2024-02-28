@@ -13,7 +13,7 @@ export function AboutSection() {
 
   return (
     <section
-      id="about"
+      id={t("id")}
       className="flex min-h-screen bg-slate-300 py-10 dark:bg-slate-900"
     >
       <div className="container flex flex-col">
@@ -47,7 +47,7 @@ export function AboutSection() {
           <div className="flex justify-center md:w-1/2">
             <ImageContain
               borderRadius="0.375rem"
-              className="cursor-auto border-none bg-transparent shadow-md shadow-zinc-300 dark:border-slate-800"
+              className="cursor-auto border-none bg-gray-400/90 shadow-md shadow-zinc-300 dark:border-slate-800 dark:bg-slate-800/90"
             >
               <Image
                 src={me}
@@ -65,7 +65,12 @@ export function AboutSection() {
           <SectionTitle title={t("title.skills")} />
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-2 xl:grid-cols-5">
             {TECHS.map((tech) => (
-              <CardSkill title={tech.title} icon={tech.icon} time={tech.time} />
+              <CardSkill
+                key={tech.title}
+                title={tech.title}
+                icon={tech.icon}
+                time={tech.time}
+              />
             ))}
           </div>
         </div>
