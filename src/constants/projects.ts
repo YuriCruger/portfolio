@@ -19,7 +19,7 @@ export const useFirstProjects = () => {
           id: "1",
           title: t_market("cards.first.title"),
           description: t_market("cards.first.description"),
-          image: "/makert/market.png",
+          image: "/market/market.png",
           className: "md:col-span-2",
         },
         {
