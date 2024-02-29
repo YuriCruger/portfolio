@@ -28,6 +28,9 @@ const config = {
       height: {
         "screen-80": "calc(100vh - 80px)",
       },
+      minHeight: {
+        "screen-80": "calc(100vh - 80px)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

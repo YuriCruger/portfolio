@@ -21,26 +21,28 @@ export default function Page() {
   const webPage = selectedProject?.web;
 
   return (
-    <div className="h-screen-80 w-full py-20">
-      <BackgroundTextureOverlay />
-      <div className="container flex items-center justify-center gap-5">
+    <div className="h-screen-80 w-full pb-20 pt-5 md:py-20">
+      <BackgroundTextureOverlay className="h-screen" />
+
+      <div className="flex flex-col items-center justify-center gap-5 px-10 sm:flex-row">
         {repository && (
-          <Link href={repository} target="_blank">
-            <Button className="gap-1">
+          <Link href={repository} target="_blank" className="max-sm:w-full">
+            <Button className="gap-1 max-sm:w-full">
               <GithubIcon size={20} />
               GitHub Repository
             </Button>
           </Link>
         )}
         {webPage && (
-          <Link href={webPage} target="_blank">
-            <Button className="gap-1">
+          <Link href={webPage} target="_blank" className="max-sm:w-full">
+            <Button className="gap-1 max-sm:w-full">
               <GlobeIcon size={20} />
               Web Page
             </Button>
           </Link>
         )}
       </div>
+
       <LayoutGrid cards={cards} />
     </div>
   );

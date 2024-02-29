@@ -102,9 +102,9 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
           duration: 0.3,
           ease: "easeInOut",
         }}
-        className="relative z-[70] px-8 pb-4"
+        className="relative z-[70] overflow-auto px-8 pb-4"
       >
-        <div className="text-center">
+        <div className="flex flex-col text-center">
           <p className="text-4xl font-bold text-white">
             {selected?.title.toLocaleUpperCase()}
           </p>

@@ -70,12 +70,12 @@ export function Header() {
 
       <motion.div
         onClick={handleOutsideClick}
-        className={`absolute left-0 top-0 z-10 h-full w-full bg-black opacity-0 md:hidden ${isMenuOpen ? "pointer-events-auto" : "pointer-events-none"}`}
+        className={`absolute left-0 top-0 z-50 h-full w-full bg-black opacity-0 md:hidden ${isMenuOpen ? "pointer-events-auto" : "pointer-events-none"}`}
         animate={{ opacity: isMenuOpen ? 0.3 : 0 }}
       />
 
       <div
-        className={`z-20 flex flex-col gap-4 rounded-md bg-zinc-300 p-3 opacity-0 duration-300 dark:bg-zinc-800  max-md:absolute md:flex-row md:items-center md:gap-0 md:rounded-none md:bg-transparent md:p-0 md:opacity-100 dark:md:bg-transparent ${isMenuOpen ? "pointer-events-auto opacity-100" : "max-md:pointer-events-none"}`}
+        className={`z-50 flex flex-col gap-4 rounded-md bg-zinc-300 p-3 opacity-0 duration-300 dark:bg-zinc-800  max-md:absolute md:flex-row md:items-center md:gap-0 md:rounded-none md:bg-transparent md:p-0 md:opacity-100 dark:md:bg-transparent ${isMenuOpen ? "pointer-events-auto opacity-100" : "max-md:pointer-events-none"}`}
       >
         <nav className="flex flex-col gap-4 md:flex-row md:items-center">
           <NavItem href="/" title={t("navItems.home")} icon="home" />
