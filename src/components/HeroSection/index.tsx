@@ -14,8 +14,8 @@ export function HeroSection() {
 
   const handleDownload = () => {
     const downloadLink = document.createElement("a");
-    downloadLink.href = "yuri-cruger-web-developer.pdf";
-    downloadLink.download = "yuri-cruger-web-developer.pdf";
+    downloadLink.href = "Yuri-Cruger-Frontend-developer.pdf";
+    downloadLink.download = "Yuri-Cruger-Frontend-developer.pdf";
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
