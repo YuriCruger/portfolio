@@ -53,7 +53,7 @@ export function HeroSection() {
 
       <div className="container mt-auto flex flex-col justify-center gap-5 pb-2 pt-5 sm:flex-row">
         <Link href="https://github.com/YuriCruger/portfolio" target="_blank">
-          <Button className="gap-1">
+          <Button className="w-full gap-1">
             <GithubIcon size={20} />
             {t("repository")}
           </Button>
