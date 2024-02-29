@@ -168,7 +168,11 @@
       "name": "The name field cannot be empty",
       "email": "The email field is not valid",
       "message": "The message field cannot be empty",
-      "toast": "Message sent successfully!"
+      "toast": "Message sent successfully!",
+      "placeholder": {
+        "name": "Name",
+        "message": "Message"
+      }
     }
   },
 

@@ -168,7 +168,11 @@
       "name": "O campo de nome não pode estar vazio",
       "email": "O campo de email não é válido",
       "message": "O campo de mensagem não pode estar vazio",
-      "toast": "Mensagem enviada com sucesso!"
+      "toast": "Mensagem enviada com sucesso!",
+      "placeholder": {
+        "name": "Nome",
+        "message": "Mensagem"
+      }
     }
   },
 

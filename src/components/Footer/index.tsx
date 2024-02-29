@@ -106,7 +106,10 @@ export function Footer() {
             <IconContainer>
               <UserIcon />
             </IconContainer>
-            <Input placeholder="Name" {...register("name")} />
+            <Input
+              placeholder={t("form.placeholder.name")}
+              {...register("name")}
+            />
             {errors.name && (
               <p className="text-xs text-red-500">{errors.name?.message}</p>
             )}
@@ -126,7 +129,10 @@ export function Footer() {
             <IconContainer>
               <MessageSquareTextIcon size={20} />
             </IconContainer>
-            <Textarea placeholder="Message" {...register("message")} />
+            <Textarea
+              placeholder={t("form.placeholder.message")}
+              {...register("message")}
+            />
             {errors.message && (
               <p className="text-xs text-red-500">{errors.message.message}</p>
             )}
