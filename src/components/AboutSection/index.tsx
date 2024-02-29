@@ -4,7 +4,6 @@ import me from "@public/me.png";
 import { TextRevealCard } from "../ui/text-reveal-card";
 import { TECHS } from "@/constants/techs";
 import { CardSkill } from "./components/CardSkill";
-import { ImageContain } from "../ui/image-contain";
 import { useTranslations } from "next-intl";
 import { ProfileInfo } from "./components/ProfileInfo";
 
@@ -34,10 +33,7 @@ export function AboutSection() {
           </div>
 
           <div className="flex justify-center md:w-1/2">
-            <ImageContain
-              borderRadius="0.375rem"
-              className="cursor-auto border-none bg-gray-400/90 shadow shadow-zinc-800 dark:border-slate-800 dark:bg-slate-800/90 dark:shadow-zinc-300"
-            >
+            <div className="rounded-md bg-gray-400/90 shadow shadow-zinc-800 dark:bg-slate-800/90 dark:shadow-zinc-300">
               <Image
                 src={me}
                 height={0}
@@ -46,7 +42,7 @@ export function AboutSection() {
                 alt="Yuri Cruger"
                 className="h-[380px] w-full object-contain"
               />
-            </ImageContain>
+            </div>
           </div>
         </div>
 
