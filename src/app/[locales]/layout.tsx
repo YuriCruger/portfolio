@@ -15,6 +15,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Yuri Cruger",
+  description: "Portfólio de desenvolvimento web.",
 };
 export default function RootLayout({
   children,
