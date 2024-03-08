@@ -66,7 +66,7 @@ export function Header() {
       }}
       className="container h-[80px] py-5 font-semibold text-zinc-900 dark:text-zinc-300"
     >
-      <button onClick={openMenu} className="md:hidden">
+      <button onClick={openMenu} className="md:hidden" aria-label="Open menu">
         <MenuIcon size={28} />
       </button>
 
@@ -112,10 +112,10 @@ export function Header() {
             onValueChange={onSelectChange}
             disabled={isPending}
           >
-            <SelectTrigger>
+            <SelectTrigger aria-label="Language selector">
               <SelectValue placeholder="Language" />
             </SelectTrigger>
-            <SelectContent aria-label="Languages">
+            <SelectContent aria-label="Language options">
               <SelectItem value="en">English</SelectItem>
               <SelectItem value="pt-BR">Português-BR</SelectItem>
             </SelectContent>
