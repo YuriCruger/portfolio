@@ -42,6 +42,7 @@ export function HeroSection() {
             <a
               key={social.url}
               href={social.url}
+              aria-label={`Link to ${social.name}`}
               className="scale-125 text-zinc-800 transition-all hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-zinc-400"
               target="_blank"
             >

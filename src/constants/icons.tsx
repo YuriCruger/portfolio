@@ -15,14 +15,17 @@ export const NAV_ICONS = {
 
 export const SOCIAL_ICONS = [
   {
+    name: "GitHub",
     icon: <GithubIcon />,
     url: "https://github.com/YuriCruger",
   },
   {
+    name: "LinkedIn",
     icon: <LinkedinIcon />,
     url: "https://www.linkedin.com/in/yuricruger/",
   },
   {
+    name: "Instagram",
     icon: <InstagramIcon />,
     url: "https://www.instagram.com/yuricruger/",
   },

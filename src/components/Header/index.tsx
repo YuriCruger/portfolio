@@ -103,7 +103,7 @@ export function Header() {
         <div className="ml-auto flex flex-col gap-4 md:flex-row md:items-center">
           <div className="flex items-center gap-2 md:ml-4">
             <SunIcon className="max-sm:hidden" />
-            <Switch onCheckedChange={toggleTheme} />
+            <Switch aria-label="Toggle theme" onCheckedChange={toggleTheme} />
             <MoonIcon className="max-sm:hidden" />
           </div>
 
@@ -115,7 +115,7 @@ export function Header() {
             <SelectTrigger>
               <SelectValue placeholder="Language" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent aria-label="Languages">
               <SelectItem value="en">English</SelectItem>
               <SelectItem value="pt-BR">Português-BR</SelectItem>
             </SelectContent>
