@@ -28,14 +28,14 @@ export function HeroSection() {
       <div className="container flex flex-1 flex-col items-center justify-center gap-5">
         <SectionTitle title={t("title")} className="pb-0" />
 
-        <TextGenerateEffect
-          words="Yuri Cruger"
-          className="text-center text-6xl font-bold text-zinc-800 dark:text-zinc-300 sm:text-6xl lg:text-8xl"
-        />
+        <h1 className="text-center text-6xl font-bold text-zinc-800 dark:text-zinc-300 sm:text-6xl lg:text-8xl">
+          Yuri Cruger
+        </h1>
 
-        <p className="font-mono uppercase text-zinc-800 dark:text-zinc-300 lg:text-lg">
-          | {t("position")} |
-        </p>
+        <TextGenerateEffect
+          words={`| ${t("position")} |`}
+          className="font-mono uppercase text-zinc-800 dark:text-zinc-300 lg:text-lg"
+        />
 
         <div className="flex items-center gap-5">
           {SOCIAL_ICONS.map((social) => (
