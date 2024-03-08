@@ -10,7 +10,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "../ui/use-toast";
 import { IconContainer } from "./components/IconContainer";
 import { SectionTitle } from "../SectionTitle";
-import { BackgroundTextureOverlay } from "../BackgroundTextureOverlay";
 import { useTranslations } from "next-intl";
 
 const webhookURL = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL!;
@@ -86,7 +85,8 @@ export function Footer() {
 
   return (
     <footer className="relative flex flex-col justify-center gap-5 bg-zinc-200 py-5 dark:bg-zinc-950">
-      <BackgroundTextureOverlay />
+      <div className="absolute inset-0  bg-background-texture opacity-15" />
+
       <SectionTitle title={t("title")} />
       <div className="container sm:max-w-[700px]">
         <div className="mb-5 space-y-5 text-center">

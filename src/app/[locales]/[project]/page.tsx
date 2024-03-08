@@ -1,5 +1,4 @@
 "use client";
-import { BackgroundTextureOverlay } from "@/components/BackgroundTextureOverlay";
 import { Button } from "@/components/ui/button";
 import { LayoutGrid } from "@/components/ui/layout-grid";
 import { useFirstProjects, useSecondProjects } from "@/constants/projects";

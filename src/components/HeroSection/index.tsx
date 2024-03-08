@@ -5,7 +5,6 @@ import { Button } from "../ui/button";
 import { FileTextIcon, GithubIcon } from "lucide-react";
 import { SectionTitle } from "../SectionTitle";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
-import { BackgroundTextureOverlay } from "../BackgroundTextureOverlay";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
