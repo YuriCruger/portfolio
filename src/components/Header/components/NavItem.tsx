@@ -1,6 +1,6 @@
 import { NAV_ICONS } from "@/constants/icons";
 
-interface NavItemProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+interface NavItemProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
   icon: string;
   scrollToSection?: (section: string) => void;
@@ -17,7 +17,7 @@ export function NavItem({
   const upperCaseTitle = title.toLocaleUpperCase();
 
   return (
-    <a
+    <button
       {...props}
       onClick={() => {
         if (scrollToSection) {
@@ -28,6 +28,6 @@ export function NavItem({
     >
       {NAV_ICONS[icon as keyof typeof NAV_ICONS]}
       {upperCaseTitle}
-    </a>
+    </button>
   );
 }
