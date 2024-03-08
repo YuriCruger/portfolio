@@ -12,13 +12,14 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useState, useTransition } from "react";
-import { useRouter } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
   const t = useTranslations("header");
   const router = useRouter();
+  const pathname = usePathname();
   const localActive = useLocale();
 
   const scrollToSection = (section: string) => {
@@ -79,16 +80,21 @@ export function Header() {
       >
         <nav className="flex flex-col gap-4 md:flex-row md:items-center">
           <NavItem href="/" title={t("navItems.home")} icon="home" />
-          <NavItem
-            title={t("navItems.about")}
-            scrollToSection={scrollToSection}
-            icon="about"
-          />
-          <NavItem
-            title={t("navItems.projects")}
-            scrollToSection={scrollToSection}
-            icon="projects"
-          />
+
+          {pathname === `/${localActive}` && (
+            <>
+              <NavItem
+                title={t("navItems.about")}
+                scrollToSection={scrollToSection}
+                icon="about"
+              />
+              <NavItem
+                title={t("navItems.projects")}
+                scrollToSection={scrollToSection}
+                icon="projects"
+              />
+            </>
+          )}
         </nav>
 
         <div className="ml-auto flex flex-col gap-4 md:flex-row md:items-center">
