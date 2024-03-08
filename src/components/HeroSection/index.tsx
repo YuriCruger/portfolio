@@ -23,12 +23,10 @@ export function HeroSection() {
 
   return (
     <section className="flex h-screen-80 flex-col items-center justify-center ">
-      <BackgroundTextureOverlay className="h-screen" />
-
       <div className="container flex flex-1 flex-col items-center justify-center gap-5">
         <SectionTitle title={t("title")} className="pb-0" />
 
-        <h1 className="text-center text-6xl font-bold text-zinc-800 dark:text-zinc-300 sm:text-6xl lg:text-8xl">
+        <h1 className="text-center text-6xl font-bold text-zinc-900 dark:text-zinc-300 sm:text-6xl lg:text-8xl">
           Yuri Cruger
         </h1>
 

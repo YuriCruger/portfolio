@@ -21,8 +21,10 @@ export default function Page() {
   const webPage = selectedProject?.web;
 
   return (
-    <div className="h-screen-80 w-full pb-20 pt-5 md:py-20">
-      <BackgroundTextureOverlay className="h-screen" />
+    <div className="h-screen w-full">
+      <h1 className="mb-5 text-center text-5xl font-bold text-zinc-900 dark:text-zinc-300">
+        {selectedProject?.title}
+      </h1>
 
       <div className="flex flex-col items-center justify-center gap-5 px-10 sm:flex-row">
         {repository && (
