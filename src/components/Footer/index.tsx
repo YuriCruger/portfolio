@@ -14,7 +14,7 @@ import { useTranslations } from "next-intl";
 
 const webhookURL = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL!;
 
-export function Footer() {
+export default function Footer() {
   const t = useTranslations("footer");
   const { toast } = useToast();
 

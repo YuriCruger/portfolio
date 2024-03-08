@@ -16,7 +16,7 @@ import Image from "next/image";
 import { ProjectCard } from "../ProjectCard";
 import { useEffect, useState } from "react";
 
-export function ProjectsSection() {
+export default function ProjectsSection() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
@@ -55,7 +55,7 @@ export function ProjectsSection() {
           <CarouselContent>
             {allProjects.map((project) => (
               <CarouselItem key={project.id}>
-                <div className="sm:aspect-w-16 sm:aspect-h-8 aspect-w-5 aspect-h-3 relative">
+                <div className="aspect-h-3 aspect-w-5 relative sm:aspect-h-8 sm:aspect-w-16">
                   <Image
                     src={project.image}
                     alt={project.title}
