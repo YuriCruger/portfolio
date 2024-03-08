@@ -1,18 +1,13 @@
-import React, { Suspense, lazy } from "react";
 import { AboutSection } from "@/components/AboutSection";
+import { ProjectsSection } from "@/components/ProjectsSection";
 import { HeroSection } from "@/components/HeroSection";
-
-const ProjectsSection = lazy(() => import("@/components/ProjectsSection"));
 
 export default function Home() {
   return (
     <>
       <HeroSection />
       <AboutSection />
-
-      <Suspense fallback={<div>Loading...</div>}>
-        <ProjectsSection />
-      </Suspense>
+      <ProjectsSection />
     </>
   );
 }

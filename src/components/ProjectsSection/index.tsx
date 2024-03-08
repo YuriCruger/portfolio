@@ -16,7 +16,7 @@ import Image from "next/image";
 import { ProjectCard } from "../ProjectCard";
 import { useEffect, useState } from "react";
 
-export default function ProjectsSection() {
+export function ProjectsSection() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
