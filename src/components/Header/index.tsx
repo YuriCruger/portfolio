@@ -80,11 +80,7 @@ export function Header() {
         className={`z-50 flex flex-col gap-4 rounded-md bg-zinc-300 p-3 opacity-0 duration-300 dark:bg-zinc-800  max-md:absolute md:flex-row md:items-center md:gap-0 md:rounded-none md:bg-transparent md:p-0 md:opacity-100 dark:md:bg-transparent ${isMenuOpen ? "pointer-events-auto opacity-100" : "max-md:pointer-events-none"}`}
       >
         <nav className="flex flex-col gap-4 md:flex-row md:items-center">
-          <Link href="/">
-            <NavItem title={t("navItems.home")} icon="home" />
-          </Link>
-
-          {pathname === `/${localActive}` && (
+          {pathname === `/${localActive}` ? (
             <>
               <NavItem
                 title={t("navItems.about")}
@@ -97,6 +93,10 @@ export function Header() {
                 icon="projects"
               />
             </>
+          ) : (
+            <Link href="/">
+              <NavItem title={t("navItems.home")} icon="home" />
+            </Link>
           )}
         </nav>
 
