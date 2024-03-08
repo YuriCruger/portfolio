@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
-// import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Toaster } from "@/components/ui/toaster";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import { useLocale } from "next-intl";
-import React, { Suspense, lazy } from "react";
 
 const poppins = Poppins({
   subsets: ["latin", "latin-ext"],
@@ -25,7 +24,6 @@ export default function RootLayout({
 }>) {
   const messages = useMessages();
   const locale = useLocale();
-  const Footer = lazy(() => import("@/components/Footer"));
   return (
     <html lang={locale}>
       <body className={`${poppins.className} bg-zinc-100 dark:bg-zinc-900`}>
@@ -35,9 +33,7 @@ export default function RootLayout({
             <ScrollToTop />
             <Toaster />
             <div className="flex-1">{children}</div>
-            <Suspense fallback={<div>Loading...</div>}>
-              <Footer />
-            </Suspense>
+            <Footer />
           </div>
         </NextIntlClientProvider>
       </body>
