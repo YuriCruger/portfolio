@@ -31,7 +31,7 @@ export function HeroSection() {
 
         <TextGenerateEffect
           words={`| ${t("position")} |`}
-          className="font-mono uppercase text-zinc-800 dark:text-zinc-300 lg:text-lg"
+          className="font-mono text-base uppercase text-zinc-800 dark:text-zinc-300 sm:text-lg"
         />
 
         <div className="flex items-center gap-5">
