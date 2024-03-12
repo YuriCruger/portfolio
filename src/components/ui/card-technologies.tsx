@@ -9,7 +9,6 @@ export function CardTechnologies({
   projectIndex,
   technologies,
 }: CardTechnologiesProps) {
-  console.log(technologies);
   return (
     <div
       className={`absolute right-0 top-12 z-10 w-full origin-top rounded-md p-3 shadow duration-500 
