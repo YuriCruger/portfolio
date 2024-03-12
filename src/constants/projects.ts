@@ -44,6 +44,18 @@ export const useFirstProjects = () => {
           className: "md:col-span-2",
         },
       ],
+      technologies: [
+        "React.js",
+        "Next.js",
+        "Firebase",
+        "Redux",
+        "HookForm",
+        "Zod",
+        "TypeScript",
+        "TailwindCSS",
+        "Shadcn",
+        "Recharts",
+      ],
     },
     {
       id: "2",
@@ -76,6 +88,7 @@ export const useFirstProjects = () => {
           className: "md:col-span-3",
         },
       ],
+      technologies: ["React.js", "HookForm", "Zod", "Styled Components"],
     },
     {
       id: "3",
@@ -108,6 +121,12 @@ export const useFirstProjects = () => {
           className: "md:col-span-2",
         },
       ],
+      technologies: [
+        "React.js",
+        "TailwindCSS",
+        "SpeechRecognition API",
+        "TypeScript",
+      ],
     },
   ];
 };
@@ -123,7 +142,7 @@ export const useSecondProjects = () => {
       slug: "nlw-food",
       title: t_food("title"),
       description: t_food("description"),
-      image: "/food_delivery/nlwFood.webp",
+      image: "/food_delivery/nlwFood.png",
       repository: "https://github.com/YuriCruger/nlw-food-delivery",
       web: "",
       cards: [
@@ -156,6 +175,7 @@ export const useSecondProjects = () => {
           className: "md:col-span-1",
         },
       ],
+      technologies: ["React Native", "Zustand", "TypeScript", "TailwindCSS"],
     },
     {
       id: "5",
@@ -195,6 +215,13 @@ export const useSecondProjects = () => {
           className: "md:col-span-1",
         },
       ],
+      technologies: [
+        "React.js",
+        "Axios",
+        "TypeScript",
+        "TailwindCSS",
+        "React Query",
+      ],
     },
     {
       id: "6",
@@ -220,6 +247,7 @@ export const useSecondProjects = () => {
           className: "md:col-span-3",
         },
       ],
+      technologies: ["React.js", "TailwindCSS"],
     },
   ];
 };

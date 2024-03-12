@@ -15,4 +15,5 @@ export type Project = {
   repository: string;
   web: string;
   cards: Card[];
+  technologies: string[];
 };
