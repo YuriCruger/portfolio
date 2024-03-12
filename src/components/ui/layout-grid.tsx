@@ -16,11 +16,14 @@ export const LayoutGrid = ({ cards }: { cards: Card[] | undefined }) => {
   const [selected, setSelected] = useState<Card | null>(null);
   const [lastSelected, setLastSelected] = useState<Card | null>(null);
   const handleClick = (card: Card) => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    document.body.style.overflow = "hidden";
     setLastSelected(selected);
     setSelected(card);
   };
 
   const handleOutsideClick = () => {
+    document.body.style.overflow = "auto";
     setLastSelected(selected);
     setSelected(null);
   };
