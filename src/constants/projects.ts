@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 export const useFirstProjects = () => {
   const t_market = useTranslations("projects_section.projects.market_admin");
   const t_dine = useTranslations("projects_section.projects.dine_restaurant");
-  const t_notes = useTranslations("projects_section.projects.nlw_notes");
+  const t_notes = useTranslations("projects_section.projects.notes");
 
   return [
     {
@@ -92,25 +92,25 @@ export const useFirstProjects = () => {
     },
     {
       id: "3",
-      slug: "nlw-notes",
+      slug: "notes",
       title: t_notes("title"),
       description: t_notes("description"),
-      image: "/notes/nlwNotes.png",
-      repository: "https://github.com/YuriCruger/nlw-notes",
-      web: "https://nlw-notes-eight.vercel.app/",
+      image: "/notes/note_page.png",
+      repository: "https://github.com/YuriCruger/fullstack-notes-application",
+      web: "https://notes-yc.vercel.app/",
       cards: [
         {
           id: "1",
           title: t_notes("cards.first.title"),
           description: t_notes("cards.first.description"),
-          image: "/notes/nlwNotes.png",
+          image: "/notes/note_login_page.png",
           className: "md:col-span-3",
         },
         {
           id: "2",
           title: t_notes("cards.second.title"),
           description: t_notes("cards.second.description"),
-          image: "/notes/notes_new_note.png",
+          image: "/notes/note_page.png",
           className: "md:col-span-1",
         },
         {
@@ -123,9 +123,13 @@ export const useFirstProjects = () => {
       ],
       technologies: [
         "React.js",
-        "TailwindCSS",
-        "SpeechRecognition API",
+        "Node.js",
+        "Hook Form + zod",
         "TypeScript",
+        "TailwindCSS",
+        "Axios",
+        "SpeechRecognition API",
+        "Jest",
       ],
     },
   ];

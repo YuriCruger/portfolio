@@ -79,17 +79,17 @@
         }
       },
 
-      "nlw_notes": {
-        "title": "NLW Notes",
-        "description": "Developed during the Rocketseat NLW Expert event, this project allows creating voice notes using the SpeechRecognition API. With technologies such as TypeScript, React, and Tailwind, users can add, edit, and remove notes, both through text and voice.",
+      "notes": {
+        "title": "Notes - Full Stack Application",
+        "description": "This is my first full stack development project. The backend, was built using Node.js, while the user interface, was an adaptation of a prior project I developed during the NLW Expert course. The greatest challenge of this project was learning to create a database, as well as implementing functionalities for user creation and authentication. As an addition to the project, I also included automated tests.",
         "cards": {
           "first": {
-            "title": "Notes",
-            "description": "The page displays all notes clearly and provides an intuitive card for adding new notes."
+            "title": "Login page",
+            "description": "On this page, the user has the option to log in or register to create a new account. All entered data is processed, securely stored, and authenticated through the database."
           },
           "second": {
-            "title": "New note",
-            "description": "A card for adding new notes, enabling voice recording using the SpeechRecognition API, or text input."
+            "title": "Notes page",
+            "description": "The page displays all notes clearly and provides a card for adding new notes, which allow for voice recording using the Speech Recognition API or text input."
           },
           "third": {
             "title": "Certificate"
