@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
-import Image from "next/image";
 
 type Card = {
   id: string;
@@ -15,28 +15,21 @@ type Card = {
 export const LayoutGrid = ({ cards }: { cards: Card[] | undefined }) => {
   const [selected, setSelected] = useState<Card | null>(null);
   const [lastSelected, setLastSelected] = useState<Card | null>(null);
+
   const handleClick = (card: Card) => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    document.body.style.overflow = "hidden";
     setLastSelected(selected);
     setSelected(card);
   };
 
-  const handleOutsideClick = () => {
-    document.body.style.overflow = "auto";
-    setLastSelected(selected);
-    setSelected(null);
-  };
-
   return (
-    <div className="mx-auto grid min-h-screen-80 w-full max-w-7xl grid-cols-1  gap-4 p-10 md:grid-cols-3 ">
+    <div className="mx-auto grid min-h-screen-80 max-w-7xl grid-cols-1 gap-4 p-10 md:grid-cols-3 ">
       {cards?.map((card) => (
         <div key={card.id} className={cn(card.className, "")}>
           <motion.div
             onClick={() => handleClick(card)}
             className={cn(
               card.className,
-              "relative overflow-hidden",
+              "relative overflow-hidden shadow-lg",
               selected?.id === card.id
                 ? "absolute inset-0 z-50 m-auto flex h-1/2 w-full cursor-pointer flex-col flex-wrap items-center justify-center rounded-lg md:w-1/2"
                 : lastSelected?.id === card.id
@@ -46,26 +39,53 @@ export const LayoutGrid = ({ cards }: { cards: Card[] | undefined }) => {
             layout
           >
             {selected?.id === card.id && <SelectedCard selected={selected} />}
-            <BlurImage card={card} />
+            <BlurImage
+              card={card}
+              selected={selected}
+              setSelected={setSelected}
+              setLastSelected={setLastSelected}
+            />
           </motion.div>
         </div>
       ))}
-      <motion.div
-        onClick={handleOutsideClick}
-        className={cn(
-          "absolute left-0 top-0 z-10 h-full w-full bg-black opacity-0",
-          selected?.id ? "pointer-events-auto" : "pointer-events-none",
-        )}
-        animate={{ opacity: selected?.id ? 0.3 : 0 }}
-      />
     </div>
   );
 };
 
-const BlurImage = ({ card }: { card: Card }) => {
+const BlurImage = ({
+  card,
+  selected,
+  setSelected,
+  setLastSelected,
+}: {
+  card: Card;
+  selected: Card | null;
+  setSelected: (card: Card | null) => void;
+  setLastSelected: (card: Card | null) => void;
+}) => {
   const [loaded, setLoaded] = useState(false);
+  const imageRef = useRef<HTMLImageElement | null>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        imageRef.current &&
+        !imageRef.current.contains(event.target as Node)
+      ) {
+        setLastSelected(selected);
+        setSelected(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [selected, setLastSelected, setSelected]);
+
   return (
     <Image
+      ref={imageRef}
       src={card.image}
       height="0"
       width="0"

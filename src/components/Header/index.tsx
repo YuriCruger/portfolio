@@ -64,7 +64,7 @@ export function Header() {
         hidden: { opacity: 0, y: -20 },
         visible,
       }}
-      className="container h-[80px] py-5 font-semibold text-zinc-900 dark:text-zinc-300"
+      className="container z-10 h-[80px] py-5 font-semibold text-zinc-900 dark:text-zinc-300"
     >
       <button onClick={openMenu} className="md:hidden" aria-label="Open menu">
         <MenuIcon size={28} />

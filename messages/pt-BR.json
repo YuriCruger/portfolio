@@ -154,6 +154,29 @@
             "title": "Modo Escuro"
           }
         }
+      },
+
+      "market_space": {
+        "title": "Ambiente de Mercado",
+        "description": "Este é um projeto desenvolvido em React Native, criado com o objetivo de simular um marketplace onde os usuários podem criar, editar e gerenciar anúncios de produtos, além de contar com um sistema de criação de conta e autenticação de login.",
+        "cards": {
+          "first": {
+            "title": "Tela de login",
+            "description": ""
+          },
+          "second": {
+            "title": "Tela inicial",
+            "description": "Nessa tela o usuário pode ver as informações do seu perfil, seus anúncios ativos e também os anúncios de outros usuários, podendo também aplicar filtros."
+          },
+          "third": {
+            "title": "Tela do anúncio",
+            "description": "Nessa tela é exibido um carrossel com as imagens e as informações do anúncio do próprio usuário."
+          },
+          "fourth": {
+            "title": "Tela de pré-visualização",
+            "description": "Nessa tela existe uma pré-visualização de como vai ficar o anúncio do usuário antes dele publicar."
+          }
+        }
       }
     }
   },

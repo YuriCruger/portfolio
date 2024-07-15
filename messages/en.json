@@ -154,6 +154,29 @@
             "title": "dark-mode"
           }
         }
+      },
+
+      "market_space": {
+        "title": "Market Space",
+        "description": "This is a project developed in React Native, created with the aim of simulating a marketplace where users can create, edit, and manage product listings, as well as have an account creation and login authentication system.",
+        "cards": {
+          "first": {
+            "title": "Login Screen",
+            "description": ""
+          },
+          "second": {
+            "title": "Home Screen",
+            "description": "On this screen, the user can view their profile information, their active listings, and also other users' listings, with the ability to apply filters."
+          },
+          "third": {
+            "title": "Ad Screen",
+            "description": "On this screen, a carousel displays the images and information of the user's own listing."
+          },
+          "fourth": {
+            "title": "Preview Screen",
+            "description": "On this screen, there is a preview of how the user's listing will look before publishing."
+          }
+        }
       }
     }
   },

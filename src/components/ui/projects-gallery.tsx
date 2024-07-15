@@ -6,10 +6,10 @@ import { Link } from "@/navigation";
 import { Project } from "@/types/product";
 
 interface ProjectsGalleryProps {
-  allProjects: Project[];
+  projects: Project[];
 }
 
-export function ProjectsGallery({ allProjects }: ProjectsGalleryProps) {
+export function ProjectsGallery({ projects }: ProjectsGalleryProps) {
   const [openTechMenuId, setOpenTechMenuId] = useState<string | null>(null);
 
   function toggleTechnologiesMenu(id: string) {
@@ -18,7 +18,7 @@ export function ProjectsGallery({ allProjects }: ProjectsGalleryProps) {
 
   return (
     <div className="container flex flex-col gap-20">
-      {allProjects.map((project, index) => (
+      {projects.map((project, index) => (
         <div
           key={project.id}
           className={`flex w-full flex-col rounded-md p-3  ${index % 2 === 0 ? "items-start bg-zinc-800/80" : "items-end bg-zinc-300"}`}

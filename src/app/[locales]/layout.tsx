@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: "Yuri Cruger",
   description: "Portfólio de desenvolvimento web.",
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,6 +25,7 @@ export default function RootLayout({
 }>) {
   const messages = useMessages();
   const locale = useLocale();
+
   return (
     <html lang={locale}>
       <body className={`${poppins.className} bg-zinc-100 dark:bg-zinc-900`}>
