@@ -36,6 +36,7 @@
   "projects_section": {
     "id": "projects",
     "title": "projects",
+    "buttonTitle": "View",
     "projects": {
       "market_admin": {
         "title": "Market Admin",

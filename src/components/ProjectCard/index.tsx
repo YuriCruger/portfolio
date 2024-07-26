@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import { Link } from "@/navigation";
 import { Project } from "@/types/product";
 import { cn } from "@/utils/cn";
+import { useTranslations } from "next-intl";
 
 interface ProjectProps {
   project: Project;
@@ -17,6 +18,8 @@ export function ProjectCard({
   imageClassName,
   textClassName,
 }: ProjectProps) {
+  const t = useTranslations("projects_section");
+
   return (
     <div
       className={cn(
@@ -48,7 +51,7 @@ export function ProjectCard({
           {project.description}
         </p>
         <Link href={`/${project.slug}`} className="mt-auto w-full">
-          <Button className="w-full">View project</Button>
+          <Button className="w-full">{t("buttonTitle")}</Button>
         </Link>
       </div>
     </div>
