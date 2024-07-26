@@ -178,6 +178,25 @@
             "description": "On this screen, there is a preview of how the user's listing will look before publishing."
           }
         }
+      },
+
+      "coffee_delivery": {
+        "title": "Coffee Delivery",
+        "description": "This app simulates a coffee e-commerce. The goal of building this application was to create interactive animations for the user, as well as to reinforce some learnings with React Native, such as AsyncStorage, React Navigation, Context API, and React Native Gesture Handler.",
+        "cards": {
+          "first": {
+            "title": "Home Screen",
+            "description": "On this screen, it is possible to find all the coffees. The user can navigate through a carousel with the main products and also through a list filtering by categories."
+          },
+          "second": {
+            "title": "Product Screen",
+            "description": "On the product page, the selected coffee information is displayed, as well as the option to select the size and quantity, showing alerts and animations if the user does not select a size."
+          },
+          "third": {
+            "title": "Cart",
+            "description": "In the cart, the differential is the 'Swipeable' animation, which allows the user to remove items from the list by swiping the card to the side."
+          }
+        }
       }
     }
   },

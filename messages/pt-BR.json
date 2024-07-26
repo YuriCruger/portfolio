@@ -178,6 +178,24 @@
             "description": "Nessa tela existe uma pré-visualização de como vai ficar o anúncio do usuário antes dele publicar."
           }
         }
+      },
+      "coffee_delivery": {
+        "title": "Entrega de café",
+        "description": "Este app simula um e-commerce de cafés. O objetivo da construção desse aplicativo foi criar animações interativas para o usuário, além de reforçar alguns aprendizados com o React Native, como, por exemplo, AsyncStorage, React Navigation, Context API e React Native Gesture Handler.",
+        "cards": {
+          "first": {
+            "title": "Tela inicial",
+            "description": "Nessa tela, é possível encontrar todos os cafés. O usuário pode navegar por um carrossel com os principais produtos e também por uma lista filtrando por categorias."
+          },
+          "second": {
+            "title": "Tela do produto",
+            "description": "Na página do produto, são mostradas as informações do café selecionado e também a opção de selecionar o tamanho e a quantidade, exibindo alertas e animações caso o usuário não selecione um tamanho."
+          },
+          "third": {
+            "title": "Carrinho",
+            "description": "No carrinho, o diferencial é a animação de 'Swipeable', que permite ao usuário remover itens da lista arrastando o card para o lado."
+          }
+        }
       }
     }
   },

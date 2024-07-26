@@ -10,6 +10,9 @@ export const useProjects = () => {
   const t_market_space = useTranslations(
     "projects_section.projects.market_space",
   );
+  const t_coffee_delivery = useTranslations(
+    "projects_section.projects.coffee_delivery",
+  );
 
   return [
     {
@@ -296,6 +299,46 @@ export const useProjects = () => {
         "React-Hook-Form",
         "React-Native-Reanimated",
         "Nativewind",
+      ],
+    },
+    {
+      id: "8",
+      slug: "coffee-delivery",
+      title: t_coffee_delivery("title"),
+      description: t_coffee_delivery("description"),
+      image: "/coffee_delivery/coffee_cover.png",
+      repository: "https://github.com/YuriCruger/coffee-delivery-rn",
+      web: "",
+      cards: [
+        {
+          id: "1",
+          title: t_coffee_delivery("cards.first.title"),
+          description: t_coffee_delivery("cards.first.description"),
+          image: "/coffee_delivery/coffe_home.png",
+          className: "lg:row-span-6",
+        },
+        {
+          id: "2",
+          title: t_coffee_delivery("cards.second.title"),
+          description: t_coffee_delivery("cards.second.description"),
+          image: "/coffee_delivery/coffe_product.png",
+          className: "lg:row-span-6",
+        },
+        {
+          id: "3",
+          title: t_coffee_delivery("cards.third.title"),
+          description: t_coffee_delivery("cards.third.description"),
+          image: "/coffee_delivery/coffe_cart.png",
+          className: "lg:row-span-6",
+        },
+      ],
+      technologies: [
+        "React Native",
+        "Expo",
+        "React Native Gesture Handler",
+        "React Native Async Storage",
+        "React Native Reanimated",
+        "Styled Components",
       ],
     },
   ];
