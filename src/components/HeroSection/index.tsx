@@ -15,6 +15,7 @@ import { Loading } from "../Loading";
 import { SectionTitle } from "../SectionTitle";
 
 import { FileTextIcon, GithubIcon } from "lucide-react";
+import { Header } from "../Header";
 
 export function HeroSection() {
   const [loadingImage, setLoadingImage] = useState(false);
